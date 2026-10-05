@@ -7,26 +7,26 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1920px;overflow:hidden;background:#0F2446;font-family:'Work Sans',sans-serif}
 .frame{position:relative;width:1080px;height:1920px}
-.loop-field{position:absolute;inset:0;opacity:.16;background:
-  radial-gradient(circle at 15% 8%, #E4CCC5 0, transparent 30%),
-  radial-gradient(circle at 88% 14%, #E4CCC5 0, transparent 26%),
-  radial-gradient(circle at 20% 92%, #E4CCC5 0, transparent 28%);
-  pointer-events:none}
-.brand{position:absolute;top:64px;left:64px;display:flex;align-items:center;gap:16px}
+.photo-layer{position:absolute;inset:0;background-image:url('foto1.webp');background-size:cover;background-position:center 20%;z-index:0}
+.photo-tint{position:absolute;inset:0;background:#0F2446;opacity:.2;mix-blend-mode:multiply;z-index:1}
+.photo-scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,24,51,0) 0%, rgba(8,24,51,0) 34%, rgba(8,24,51,.64) 64%, rgba(8,24,51,.96) 100%);z-index:1}
+.brand{position:absolute;top:64px;left:64px;display:flex;align-items:center;gap:16px;z-index:3}
 .brand img{width:48px;height:auto;display:block}
 .brand span{font-size:19px;color:#F3E4DE;letter-spacing:.03em;font-weight:500}
-.body{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 90px;text-align:center}
-.hook{font-family:'Fraunces',Georgia,serif;font-weight:500;color:#F6F1ED;font-size:66px;line-height:1.22;text-wrap:balance}
+.body{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:0 78px 86px}
+.hook{font-family:'Fraunces',Georgia,serif;font-weight:500;color:#F6F1ED;font-size:58px;line-height:1.24;text-wrap:balance}
 .hook em{font-style:normal;color:#E4CCC5}
-.swipe{position:absolute;bottom:100px;left:0;right:0;text-align:center;font-size:21px;color:#E4CCC5;letter-spacing:.04em;font-weight:500;line-height:1.3}
+.swipe{margin-top:48px;text-align:center;font-size:21px;color:#E4CCC5;letter-spacing:.04em;font-weight:500}
 </style></head>
 <body>
 <div class="frame">
-  <div class="loop-field"></div>
+  <div class="photo-layer"></div>
+  <div class="photo-tint"></div>
+  <div class="photo-scrim"></div>
   <div class="brand"><img src="icon.png" alt=""><span>DRA. LALY BRICKLER</span></div>
   <div class="body">
     <p class="hook">Primer, segundo o <em>tercer trimestre</em> — esto es lo que tu cuerpo, y tu bebé, están haciendo ahora.</p>
+    <p class="swipe">Desliza para ver cada etapa →</p>
   </div>
-  <p class="swipe">Desliza para ver cada etapa →</p>
 </div>
 </body></html>
