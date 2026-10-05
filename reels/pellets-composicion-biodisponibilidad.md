@@ -3,7 +3,7 @@ Formato: Instagram Reel/Carrusel · 9:16 · 7 slides (1080×1920 c/u)
 
 Diseño visual (slides listas para exportar/grabar): https://claude.ai/artifact/97bRFpdkMRFaYShstqvNvx
 
-Paleta: azul navy (#10263F) + palo rosa (#D9AC9C) + marfil (#FBF5EF). Tipografías: Playfair Display (titulares) + Jost (texto). Logo reinterpretado en navy/palo rosa (ícono redibujado como aproximación vectorial — no hay archivo fuente editable del logo original).
+Paleta: azul navy (#10263F) + palo rosa (#E1CCC5, muestreado directamente del logo real) + marfil (#FBF5EF). Tipografías: Fraunces (titulares) + Plus Jakarta Sans (texto). Logo reconstruido a partir del archivo real (ícono de dos aros + dos líneas), en su color de marca exacto en los 7 slides.
 
 Este reel está enfocado exclusivamente en **qué son los pellets, su composición y su biodisponibilidad** — sin listar síntomas de perimenopausia/menopausia.
 
@@ -32,13 +32,16 @@ Este reel está enfocado exclusivamente en **qué son los pellets, su composici�
 - Ácido esteárico → excipiente aglutinante, en mínima cantidad
 - Cilindro estéril → tamaño aproximado: un grano de arroz
 
+**Imagen:** infografía de composición (referencia).
+
 ---
 
 ## Slide 4 — Biodisponibilidad
 **Titular:** Una liberación que sigue la demanda del cuerpo
-**Texto:** Al colocarse bajo la piel, el pellet evita el paso por el estómago y el metabolismo hepático de primer paso: libera la hormona de forma más directa y constante. El flujo sanguíneo alrededor del pellet —mayor en actividad, menor en reposo— regula cuánta hormona se absorbe cada día.
+**Texto:** Al colocarse bajo la piel, el pellet evita el metabolismo hepático de primer paso: libera la hormona de forma más directa y constante hacia la circulación.
+**Imagen:** diagrama de inserción subdérmica (ilustrativo).
 
-**Datos clave:** 4–6 meses de liberación sostenida · relación estradiol:estrona ≈1.5:1 (fisiológica) · 0 pastillas diarias.
+**Datos clave:** 5 meses de liberación sostenida · relación E2 (fisiológica) · 0 pastillas diarias.
 
 ---
 
@@ -46,7 +49,7 @@ Este reel está enfocado exclusivamente en **qué son los pellets, su composici�
 **Titular:** Una opción personalizada — no una promesa universal.
 1. Dosificación constante, sin la rutina diaria de pastillas
 2. Aplicación breve, en consultorio
-3. Seguimiento hormonal y clínico personalizado
+3. Seguimiento hormonal y clínico personalizado, por mi persona
 
 **Nota:** Tu candidatura se define con una evaluación hormonal y clínica individual. Es un tratamiento bien tolerado cuando lo aplica un profesional certificado, con seguimiento continuo.
 
@@ -97,6 +100,6 @@ Al colocarse bajo la piel evitan el metabolismo hepático de primer paso, libera
 ---
 
 ## Notas de producción
-- Duración total sugerida: 30–45 seg si se graba como Reel (voz en off leyendo cada slide) o se usa como carrusel estático.
-- Formato vertical 1080×1920, subtítulos quemados si se narra.
+- Video final exportado: `reel-pellets-bioidenticos.mp4` (1080×1920, ~31 seg, 7 escenas con transición suave, sin audio) + las 7 imágenes PNG individuales (por si se prefiere subir como carrusel).
+- **Música:** no se incrustó ninguna pista (no hay una fuente de música instrumental con licencia verificable disponible en este flujo). Al publicar el Reel directamente en Instagram, usar el buscador de audio nativo de la app y buscar "lounge", "chill house" o "lounge house" — son pistas con licencia ya cubierta por Instagram y además ayudan al alcance del Reel. Ajustar la sincronía de los cortes de escena al beat si se desea.
 - Revisar con la normativa local de publicidad en salud antes de publicar.
