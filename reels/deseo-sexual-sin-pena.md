@@ -9,7 +9,7 @@ Paleta de marca: Azul navy (#0F2446) + Palo rosa (#E4CCC5) + Hueso (#F6F1ED)
 > Tiene nombre. Tiene manejo.
 
 **Locución:**
-> "Si sientes que tu deseo sexual 'desapareció', no estás sola — y esto no es casualidad. Tiene nombre, y tiene manejo."
+> "Si sientes que tu deseo sexual 'desapareció', probablemente hay una causa — y tiene manejo."
 
 **Visual sugerido:** Primer plano a cámara, tono cercano y directo — sin sonreír de más, esto se dice en serio. Fondo navy de marca.
 
