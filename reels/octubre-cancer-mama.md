@@ -98,6 +98,17 @@ En tu control ginecológico anual evaluamos tu mama, tu historia de riesgo y te 
 - Publicar en horario de mayor tráfico (ver estrategia de publicidad: fines de semana y noches entre semana suelen tener mejor alcance para contenido de salud/bienestar en Instagram).
 - Revisar con la normativa local de publicidad en salud antes de publicar.
 
+### Branding — paleta y logo
+Paleta aprobada: **predominio rosa/palo rosa sobre navy** (más superficie rosa que azul en el video).
+
+- Navy (fondo de apertura/cierre, texto sobre rosa): `#13284A`
+- Palo rosa / rosa empolvado (acento, botón CTA, texto sobre navy): `#E7B9A6`
+- Rosa terracota (tarjetas de cifras, fondo secundario): `#DEA98E`
+- Fondo rosa pálido (fondo dominante en cuadros intermedios): `#F6E8DE`
+- Tipografía sugerida: serif editorial (ej. Fraunces) para titulares/cifras + sans elegante (ej. Work Sans) para textos de apoyo — evitar fuentes genéricas tipo Arial/Roboto.
+- Logo: usar el isotipo + wordmark "Dra. Laly Brickler · Gynecology & Obstetrics" en los cuadros de apertura (gancho) y cierre (CTA) sobre fondo navy (tal cual el lockup original); versión reducida como sello/badge en los cuadros intermedios de fondo rosa.
+- Storyboard visual de referencia (5 cuadros, con logo y paleta reales): ver artifact publicado en esta conversación.
+
 ---
 
 ## Fuentes consultadas (verificado en web, octubre 2026)
