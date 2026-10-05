@@ -124,6 +124,9 @@ h1{
   color:var(--rose-soft);
   font-variant-numeric:tabular-nums;
   letter-spacing:.04em;
+  background:rgba(8,24,51,.55);
+  padding:4px 8px;
+  border-radius:6px;
   z-index:5;
 }
 
@@ -161,6 +164,21 @@ h1{
   z-index:1;
 }
 
+/* scene 2: a real product photo band sitting above the comparison table */
+.frame-photo-top{
+  position:relative;
+  flex:0 0 34%;
+  background-size:cover;
+  background-position:center 32%;
+  z-index:0;
+}
+.frame-photo-top::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(15,36,70,0) 58%, var(--navy) 100%);
+}
+
 .frame-body{
   position:relative;
   flex:1;
@@ -171,7 +189,7 @@ h1{
   gap:14px;
   z-index:2;
 }
-.frame-body.top{justify-content:center;padding-top:44px;padding-bottom:20px}
+.frame-body.top{justify-content:center;padding-top:16px;padding-bottom:18px}
 .table-frame{gap:9px}
 .frame-body.bottom{justify-content:flex-end;padding-bottom:30px}
 
@@ -370,7 +388,7 @@ footer{
     <!-- Shot 2 — Tabla comparativa -->
     <div class="shot">
       <div class="frame">
-        <div class="loop-field"></div>
+        <div class="frame-photo-top" style="background-image:url('foto2.webp')"></div>
         <span class="frame-time">3–26 seg</span>
         <div class="frame-body top table-frame">
           <p class="table-title">Comparativo rápido</p>
@@ -408,8 +426,8 @@ footer{
       <div class="note">
         <h2>Escena 2 — La tabla</h2>
         <span class="line">Una fila aparece a la vez, al ritmo de la locución.</span>
-        <p>Es el corazón del reel: letra grande, alto contraste (palo rosa para los datos que destacan, blanco hueso para el resto). Nada de texto bajo 24px reales en pantalla — en Reels se lee en 1–2 segundos por fila.</p>
-        <div class="tags"><span class="tag">Una fila = un corte</span><span class="tag">Asterisco aclarado en audio</span></div>
+        <p>La foto real de los tres métodos ancla el tema desde el primer segundo — nadie confunde de qué se habla. Se funde hacia navy para que la tabla, abajo, mantenga el mismo alto contraste (palo rosa para los datos que destacan, blanco hueso para el resto).</p>
+        <div class="tags"><span class="tag">Foto real de métodos</span><span class="tag">Una fila = un corte</span><span class="tag">Asterisco aclarado en audio</span></div>
       </div>
     </div>
 
