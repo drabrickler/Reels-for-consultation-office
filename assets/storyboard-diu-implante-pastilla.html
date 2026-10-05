@@ -1,0 +1,427 @@
+<title>Storyboard DIU Implante Pastilla</title>
+<style>
+/* Layout: vertical storyboard of 3 phone-ratio reel frames (Gancho / Tabla / CTA),
+   each paired with a production note card — read top to bottom like a shot list. */
+:root{
+  --navy: #0F2446;
+  --navy-deep: #081833;
+  --navy-mid: #1B3A63;
+  --rose: #E4CCC5;
+  --rose-soft: #F3E4DE;
+  --ivory: #F6F1ED;
+  --ink: #0B1626;
+  --paper: #FBF8F6;
+  --line: rgba(15,36,70,0.12);
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper: #0C1322;
+    --ink: #EDE7E2;
+    --line: rgba(228,204,197,0.18);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper: #0C1322;
+  --ink: #EDE7E2;
+  --line: rgba(228,204,197,0.18);
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  padding-inline:20px;
+  padding-block:48px;
+}
+.wrap{max-width:1180px;margin-inline:auto}
+
+header.masthead{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:8px;
+  padding-bottom:28px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  font-family:var(--font-body);
+  font-size:12.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--rose);
+  background:var(--navy);
+  display:inline-block;
+  padding:5px 12px;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+h1{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:clamp(28px,4.2vw,44px);
+  line-height:1.05;
+  margin:0 0 10px;
+  text-wrap:balance;
+  max-width:14ch;
+}
+.sub{
+  font-size:15.5px;
+  line-height:1.55;
+  color:var(--ink);
+  opacity:.72;
+  max-width:52ch;
+  margin:0;
+}
+.meta{
+  text-align:right;
+  font-size:13px;
+  line-height:1.7;
+  opacity:.6;
+  white-space:nowrap;
+}
+
+.storyboard{
+  display:flex;
+  flex-direction:column;
+  gap:56px;
+  margin-top:44px;
+}
+.shot{
+  display:grid;
+  grid-template-columns:min(260px,38vw) 1fr;
+  gap:28px;
+  align-items:start;
+}
+@media (max-width:620px){
+  .shot{grid-template-columns:1fr}
+}
+
+.frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:9/16;
+  border-radius:22px;
+  overflow:hidden;
+  background:var(--navy);
+  box-shadow:0 18px 40px -18px rgba(8,24,51,0.55);
+  border:1px solid rgba(228,204,197,0.25);
+  display:flex;
+  flex-direction:column;
+}
+.frame-label{
+  position:absolute;
+  top:14px;
+  left:14px;
+  font-size:10.5px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--navy);
+  background:var(--rose);
+  padding:4px 9px;
+  border-radius:6px;
+  font-weight:600;
+  z-index:5;
+}
+.frame-time{
+  position:absolute;
+  top:14px;
+  right:14px;
+  font-size:10.5px;
+  color:var(--rose-soft);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.04em;
+  z-index:5;
+}
+
+/* decorative loop pulled from the brand mark, used as ambient texture */
+.loop-field{
+  position:absolute;
+  inset:0;
+  opacity:.14;
+  background:
+    radial-gradient(circle at 18% 10%, var(--rose) 0, transparent 34%),
+    radial-gradient(circle at 85% 6%, var(--rose) 0, transparent 30%);
+  pointer-events:none;
+}
+
+.frame-body{
+  position:relative;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:30px 22px;
+  gap:14px;
+  z-index:2;
+}
+.frame-body.top{justify-content:flex-start;padding-top:56px}
+.frame-body.bottom{justify-content:flex-end;padding-bottom:30px}
+
+.hook-text{
+  font-family:var(--font-display);
+  color:var(--ivory);
+  font-size:clamp(20px,2.6vw,25px);
+  line-height:1.18;
+  font-weight:500;
+  text-wrap:balance;
+}
+.hook-text em{
+  font-style:normal;
+  color:var(--rose);
+}
+.hook-cred{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:auto;
+}
+.hook-cred img{width:26px;height:auto;display:block}
+.hook-cred span{font-size:10px;color:var(--rose-soft);letter-spacing:.03em}
+
+.table-title{
+  font-family:var(--font-display);
+  color:var(--ivory);
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:2px;
+}
+.ctable{width:100%;border-collapse:collapse}
+.ctable th, .ctable td{
+  padding:9px 5px;
+  text-align:center;
+  border-bottom:1px solid rgba(246,241,237,0.14);
+}
+.ctable th{
+  font-size:10px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--rose);
+  font-weight:600;
+}
+.ctable th:first-child, .ctable td:first-child{
+  text-align:left;
+  color:var(--rose-soft);
+  font-size:10.5px;
+  opacity:.85;
+  padding-left:2px;
+}
+.ctable td{
+  color:var(--ivory);
+  font-size:13px;
+  font-weight:600;
+  font-variant-numeric:tabular-nums;
+}
+.ctable td.standout{color:var(--rose)}
+.table-foot{
+  font-size:9px;
+  color:var(--rose-soft);
+  opacity:.65;
+  margin-top:8px;
+  line-height:1.4;
+}
+
+.cta-head{
+  font-family:var(--font-display);
+  color:var(--ivory);
+  font-size:clamp(18px,2.4vw,22px);
+  line-height:1.22;
+  font-weight:500;
+  text-wrap:balance;
+  margin-bottom:16px;
+}
+.cta-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:var(--rose);
+  color:var(--navy-deep);
+  font-weight:600;
+  font-size:12.5px;
+  padding:10px 16px;
+  border-radius:999px;
+  width:fit-content;
+}
+.cta-logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:20px;
+}
+.cta-logo img{width:30px;height:auto;display:block}
+.cta-logo .ln{display:flex;flex-direction:column;line-height:1.25}
+.cta-logo .ln b{font-family:var(--font-display);color:var(--ivory);font-size:12.5px;font-weight:600}
+.cta-logo .ln small{color:var(--rose-soft);font-size:9px;letter-spacing:.03em}
+
+.note{
+  padding-top:6px;
+}
+.note h2{
+  font-family:var(--font-display);
+  font-size:19px;
+  font-weight:600;
+  margin:0 0 10px;
+  color:var(--ink);
+}
+.note p{
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 10px;
+  color:var(--ink);
+  opacity:.82;
+  max-width:60ch;
+}
+.note .line{
+  display:block;
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:15.5px;
+  color:var(--navy);
+  margin:0 0 12px;
+}
+:root[data-theme="dark"] .note .line{ color: var(--rose); }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .note .line{ color: var(--rose); } }
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{
+  font-size:11px;
+  letter-spacing:.03em;
+  padding:5px 10px;
+  border-radius:7px;
+  border:1px solid var(--line);
+  opacity:.75;
+}
+
+footer{
+  margin-top:60px;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  opacity:.55;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <span class="eyebrow">Storyboard · Reel planificación familiar</span>
+      <h1>DIU, implante o pastilla</h1>
+      <p class="sub">Guía visual de las 3 escenas clave del reel, en la paleta de marca — azul navy + palo rosa — para brief de grabación o edición.</p>
+    </div>
+    <div class="meta">Dra. Laly Brickler<br>Gynecology &amp; Obstetrics<br>30–40 seg · 9:16</div>
+  </header>
+
+  <div class="storyboard">
+
+    <!-- Shot 1 — Hook -->
+    <div class="shot">
+      <div class="frame">
+        <div class="loop-field"></div>
+        <span class="frame-label">Escena 1</span>
+        <span class="frame-time">0–3 seg</span>
+        <div class="frame-body">
+          <p class="hook-text">No existe<br>"el mejor método".<br>Existe el mejor método<br>para <em>TU cuerpo.</em></p>
+          <div class="hook-cred">
+            <img src="logo.png" alt="">
+            <span>DRA. LALY BRICKLER</span>
+          </div>
+        </div>
+      </div>
+      <div class="note">
+        <h2>Escena 1 — Gancho</h2>
+        <span class="line">"DIU, implante, pastilla... no hay una sola respuesta correcta."</span>
+        <p>Primer plano a cámara, tono cálido y seguro — no de venta. El texto entra en dos tiempos: la frase genérica primero, "TU cuerpo" remarcado en palo rosa después, para que el ojo se detenga ahí.</p>
+        <div class="tags"><span class="tag">Fondo navy sólido</span><span class="tag">Logo pequeño, esquina inferior</span></div>
+      </div>
+    </div>
+
+    <!-- Shot 2 — Tabla comparativa -->
+    <div class="shot">
+      <div class="frame">
+        <div class="loop-field"></div>
+        <span class="frame-label">Escena 2</span>
+        <span class="frame-time">3–26 seg</span>
+        <div class="frame-body top">
+          <p class="table-title">Comparativo rápido</p>
+          <table class="ctable">
+            <thead>
+              <tr><th></th><th>DIU</th><th>Implante</th><th>Pastilla</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Duración</td>
+                <td class="standout">3–10 años</td>
+                <td class="standout">3 años</td>
+                <td>Diaria</td>
+              </tr>
+              <tr>
+                <td>Efectividad</td>
+                <td class="standout">+99%</td>
+                <td class="standout">+99%</td>
+                <td>91–99%*</td>
+              </tr>
+              <tr>
+                <td>Reversible</td>
+                <td>Inmediata</td>
+                <td>Inmediata</td>
+                <td>Inmediata</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="table-foot">*Uso típico vs. uso perfecto. Candidatura real: en consulta.</p>
+        </div>
+      </div>
+      <div class="note">
+        <h2>Escena 2 — La tabla</h2>
+        <span class="line">Una fila aparece a la vez, al ritmo de la locución.</span>
+        <p>Es el corazón del reel: letra grande, alto contraste (palo rosa para los datos que destacan, blanco hueso para el resto). Nada de texto bajo 24px reales en pantalla — en Reels se lee en 1–2 segundos por fila.</p>
+        <div class="tags"><span class="tag">Una fila = un corte</span><span class="tag">Asterisco aclarado en audio</span></div>
+      </div>
+    </div>
+
+    <!-- Shot 3 — CTA -->
+    <div class="shot">
+      <div class="frame">
+        <div class="loop-field"></div>
+        <span class="frame-label">Escena 3</span>
+        <span class="frame-time">33–40 seg</span>
+        <div class="frame-body bottom">
+          <p class="cta-head">Hablemos cuál se ajusta a tus planes — con o sin embarazo en el horizonte.</p>
+          <span class="cta-pill">Agenda tu consulta →</span>
+          <div class="cta-logo">
+            <img src="logo.png" alt="">
+            <span class="ln"><b>Dra. Laly Brickler</b><small>CIMA · Torre Médica I · Escazú</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="note">
+        <h2>Escena 3 — Cierre</h2>
+        <span class="line">"Sin juicios, sin presión — tu decisión, informada."</span>
+        <p>El pill rosa funciona como botón visual aunque no sea clicable: en neuromarketing, una forma de "botón" se reconoce como acción posible más rápido que un texto suelto. Logo y ubicación fijan el recuerdo de marca al cierre.</p>
+        <div class="tags"><span class="tag">CTA sin presionar un método</span><span class="tag">Link en bio / DM</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Paleta: Navy #0F2446 · Palo rosa #E4CCC5 · Hueso #F6F1ED</span>
+    <span>Guion completo: reels/diu-implante-pastilla-planificacion-familiar.md</span>
+  </footer>
+
+</div>
