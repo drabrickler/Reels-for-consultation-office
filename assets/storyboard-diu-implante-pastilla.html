@@ -116,20 +116,6 @@ h1{
   display:flex;
   flex-direction:column;
 }
-.frame-label{
-  position:absolute;
-  top:14px;
-  left:14px;
-  font-size:10.5px;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--navy);
-  background:var(--rose);
-  padding:4px 9px;
-  border-radius:6px;
-  font-weight:600;
-  z-index:5;
-}
 .frame-time{
   position:absolute;
   top:14px;
@@ -141,7 +127,7 @@ h1{
   z-index:5;
 }
 
-/* decorative loop pulled from the brand mark, used as ambient texture */
+/* decorative loop pulled from the brand mark, used as ambient texture on text-only frames */
 .loop-field{
   position:absolute;
   inset:0;
@@ -150,6 +136,29 @@ h1{
     radial-gradient(circle at 18% 10%, var(--rose) 0, transparent 34%),
     radial-gradient(circle at 85% 6%, var(--rose) 0, transparent 30%);
   pointer-events:none;
+}
+
+/* real photo frames: photo + navy color-wash + bottom scrim so text stays legible */
+.photo-layer{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center 22%;
+  z-index:0;
+}
+.photo-tint{
+  position:absolute;
+  inset:0;
+  background:var(--navy);
+  opacity:.22;
+  mix-blend-mode:multiply;
+  z-index:1;
+}
+.photo-scrim{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(8,24,51,0) 0%, rgba(8,24,51,0) 36%, rgba(8,24,51,.6) 66%, rgba(8,24,51,.95) 100%);
+  z-index:1;
 }
 
 .frame-body{
@@ -337,11 +346,12 @@ footer{
 
     <!-- Shot 1 — Hook -->
     <div class="shot">
-      <div class="frame">
-        <div class="loop-field"></div>
-        <span class="frame-label">Escena 1</span>
+      <div class="frame photo-frame">
+        <div class="photo-layer" style="background-image:url('foto1.webp')"></div>
+        <div class="photo-tint"></div>
+        <div class="photo-scrim"></div>
         <span class="frame-time">0–3 seg</span>
-        <div class="frame-body">
+        <div class="frame-body bottom">
           <p class="hook-text">No existe<br>"el mejor método".<br>Existe el mejor método<br>para <em>TU cuerpo.</em></p>
           <div class="hook-cred">
             <img src="logo.png" alt="">
@@ -352,8 +362,8 @@ footer{
       <div class="note">
         <h2>Escena 1 — Gancho</h2>
         <span class="line">"DIU, implante, pastilla... no hay una sola respuesta correcta."</span>
-        <p>Primer plano a cámara, tono cálido y seguro — no de venta. El texto entra en dos tiempos: la frase genérica primero, "TU cuerpo" remarcado en palo rosa después, para que el ojo se detenga ahí.</p>
-        <div class="tags"><span class="tag">Fondo navy sólido</span><span class="tag">Logo pequeño, esquina inferior</span></div>
+        <p>Primer plano a cámara real, tono cálido y seguro — no de venta. Un velo navy en degradado hacia abajo mantiene el texto legible sin tapar el rostro. "TU cuerpo" se remarca en palo rosa para que el ojo se detenga ahí.</p>
+        <div class="tags"><span class="tag">Foto + velo navy</span><span class="tag">Logo pequeño, esquina inferior</span></div>
       </div>
     </div>
 
@@ -361,7 +371,6 @@ footer{
     <div class="shot">
       <div class="frame">
         <div class="loop-field"></div>
-        <span class="frame-label">Escena 2</span>
         <span class="frame-time">3–26 seg</span>
         <div class="frame-body top table-frame">
           <p class="table-title">Comparativo rápido</p>
@@ -406,9 +415,10 @@ footer{
 
     <!-- Shot 3 — CTA -->
     <div class="shot">
-      <div class="frame">
-        <div class="loop-field"></div>
-        <span class="frame-label">Escena 3</span>
+      <div class="frame photo-frame">
+        <div class="photo-layer" style="background-image:url('foto3.webp')"></div>
+        <div class="photo-tint"></div>
+        <div class="photo-scrim"></div>
         <span class="frame-time">33–40 seg</span>
         <div class="frame-body bottom">
           <p class="cta-head">Hablemos cuál se ajusta a tus planes — con o sin embarazo en el horizonte.</p>
@@ -423,7 +433,7 @@ footer{
         <h2>Escena 3 — Cierre</h2>
         <span class="line">"Sin juicios, sin presión — tu decisión, informada."</span>
         <p>El pill rosa funciona como botón visual aunque no sea clicable: en neuromarketing, una forma de "botón" se reconoce como acción posible más rápido que un texto suelto. Logo y ubicación fijan el recuerdo de marca al cierre.</p>
-        <div class="tags"><span class="tag">CTA sin presionar un método</span><span class="tag">Link en bio / DM</span></div>
+        <div class="tags"><span class="tag">Foto + velo navy</span><span class="tag">Link en bio / DM</span></div>
       </div>
     </div>
 
