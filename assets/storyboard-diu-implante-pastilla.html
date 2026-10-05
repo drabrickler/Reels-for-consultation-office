@@ -162,7 +162,8 @@ h1{
   gap:14px;
   z-index:2;
 }
-.frame-body.top{justify-content:flex-start;padding-top:56px}
+.frame-body.top{justify-content:center;padding-top:44px;padding-bottom:20px}
+.table-frame{gap:9px}
 .frame-body.bottom{justify-content:flex-end;padding-bottom:30px}
 
 .hook-text{
@@ -189,19 +190,24 @@ h1{
 .table-title{
   font-family:var(--font-display);
   color:var(--ivory);
-  font-size:15px;
+  font-size:13.5px;
   font-weight:600;
-  margin-bottom:2px;
+  margin:0;
+  text-align:center;
 }
-.ctable{width:100%;border-collapse:collapse}
+.ctable{width:100%;table-layout:fixed;border-collapse:collapse}
+.ctable col.label{width:30%}
+.ctable col.method{width:23.33%}
 .ctable th, .ctable td{
-  padding:9px 5px;
+  padding:6px 3px;
   text-align:center;
   border-bottom:1px solid rgba(246,241,237,0.14);
+  word-break:break-word;
+  line-height:1.15;
 }
 .ctable th{
-  font-size:10px;
-  letter-spacing:.06em;
+  font-size:8.5px;
+  letter-spacing:.04em;
   text-transform:uppercase;
   color:var(--rose);
   font-weight:600;
@@ -209,23 +215,24 @@ h1{
 .ctable th:first-child, .ctable td:first-child{
   text-align:left;
   color:var(--rose-soft);
-  font-size:10.5px;
+  font-size:9px;
   opacity:.85;
   padding-left:2px;
 }
 .ctable td{
   color:var(--ivory);
-  font-size:13px;
+  font-size:10.5px;
   font-weight:600;
   font-variant-numeric:tabular-nums;
 }
 .ctable td.standout{color:var(--rose)}
 .table-foot{
-  font-size:9px;
+  font-size:7.5px;
   color:var(--rose-soft);
   opacity:.65;
-  margin-top:8px;
-  line-height:1.4;
+  margin:0;
+  line-height:1.35;
+  text-align:center;
 }
 
 .cta-head{
@@ -356,9 +363,12 @@ footer{
         <div class="loop-field"></div>
         <span class="frame-label">Escena 2</span>
         <span class="frame-time">3–26 seg</span>
-        <div class="frame-body top">
+        <div class="frame-body top table-frame">
           <p class="table-title">Comparativo rápido</p>
           <table class="ctable">
+            <colgroup>
+              <col class="label"><col class="method"><col class="method"><col class="method">
+            </colgroup>
             <thead>
               <tr><th></th><th>DIU</th><th>Implante</th><th>Pastilla</th></tr>
             </thead>
