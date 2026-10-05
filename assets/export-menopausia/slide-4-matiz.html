@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F2446;font-family:'Work Sans',sans-serif}
+.frame{position:relative;width:1080px;height:1920px}
+.loop-field{position:absolute;inset:0;opacity:.12;background:
+  radial-gradient(circle at 88% 10%, #E4CCC5 0, transparent 28%),
+  radial-gradient(circle at 10% 90%, #E4CCC5 0, transparent 30%);
+  pointer-events:none}
+.brand{position:absolute;top:64px;left:64px;display:flex;align-items:center;gap:16px;z-index:3}
+.brand img{width:48px;height:auto;display:block}
+.brand span{font-size:23px;color:#F3E4DE;letter-spacing:.03em;font-weight:600}
+.dots{position:absolute;top:76px;right:64px;display:flex;gap:11px;z-index:3}
+.dot{width:11px;height:11px;border-radius:50%;border:2px solid #E4CCC5}
+.dot.on{background:#E4CCC5}
+
+.body{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 80px;text-align:center}
+
+.card{
+  width:100%;max-width:860px;
+  background:linear-gradient(165deg, rgba(228,204,197,.14), rgba(228,204,197,.04));
+  border:2px solid rgba(228,204,197,.45);
+  border-radius:32px;
+  padding:56px 50px;
+}
+.icon{width:72px;height:72px;margin:0 auto 30px;display:block}
+.tag{color:#E4CCC5;font-size:25px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;margin-bottom:26px}
+.headline{font-family:'Fraunces',Georgia,serif;font-weight:600;color:#F6F1ED;font-size:44px;line-height:1.3;text-wrap:balance;margin-bottom:30px}
+.sub{font-size:27px;color:#F3E4DE;line-height:1.5}
+</style></head>
+<body>
+<div class="frame">
+  <div class="loop-field"></div>
+  <div class="brand"><img src="icon.png" alt=""><span>DRA. LALY BRICKLER</span></div>
+  <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+  <div class="body">
+    <div class="card">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#E4CCC5" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.5v6"/><circle cx="12" cy="16.7" r="0.9" fill="#E4CCC5" stroke="none"/></svg>
+      <div class="tag">Importante</div>
+      <p class="headline">La advertencia por cáncer de endometrio se mantiene.</p>
+      <p class="sub">En pacientes con útero que usan solo estrógeno. Cada caso se evalúa de forma individual — nunca como receta genérica.</p>
+    </div>
+  </div>
+</div>
+</body></html>

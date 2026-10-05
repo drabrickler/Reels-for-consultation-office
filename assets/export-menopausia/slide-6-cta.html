@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F2446;font-family:'Work Sans',sans-serif}
+.frame{position:relative;width:1080px;height:1920px}
+.loop-field{position:absolute;inset:0;opacity:.16;background:
+  radial-gradient(circle at 88% 12%, #E4CCC5 0, transparent 30%),
+  radial-gradient(circle at 10% 20%, #E4CCC5 0, transparent 26%),
+  radial-gradient(circle at 78% 92%, #E4CCC5 0, transparent 28%);
+  pointer-events:none}
+.brand{position:absolute;top:64px;left:64px;display:flex;align-items:center;gap:16px;z-index:3}
+.brand img{width:48px;height:auto;display:block}
+.brand span{font-size:23px;color:#F3E4DE;letter-spacing:.03em;font-weight:600}
+.dots{position:absolute;top:76px;right:64px;display:flex;gap:11px;z-index:3}
+.dot{width:11px;height:11px;border-radius:50%;border:2px solid #E4CCC5}
+.dot.on{background:#E4CCC5}
+
+.body{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 86px}
+.eyebrow{color:#E4CCC5;font-size:27px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:32px}
+.cta-head{font-family:'Fraunces',Georgia,serif;color:#F6F1ED;font-size:66px;line-height:1.18;font-weight:500;max-width:880px;text-wrap:balance;margin-bottom:50px}
+.cta-head em{font-style:normal;color:#E4CCC5}
+.cta-pill{display:inline-flex;align-items:center;gap:16px;background:#E4CCC5;color:#081833;font-weight:700;font-size:38px;padding:27px 42px;border-radius:999px;width:fit-content}
+.cta-logo{display:flex;align-items:center;gap:22px;margin-top:56px}
+.cta-logo img{width:72px;height:auto;display:block}
+.cta-logo .ln{display:flex;flex-direction:column;line-height:1.3}
+.cta-logo .ln b{font-family:'Fraunces',Georgia,serif;color:#F6F1ED;font-size:34px;font-weight:600}
+.cta-logo .ln small{color:#F3E4DE;font-size:22px;letter-spacing:.03em}
+</style></head>
+<body>
+<div class="frame">
+  <div class="loop-field"></div>
+  <div class="brand"><img src="icon.png" alt=""><span>DRA. LALY BRICKLER</span></div>
+  <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot on"></span></div>
+  <div class="body">
+    <span class="eyebrow">Terapia hormonal · menopausia</span>
+    <p class="cta-head">La ciencia <em>avanzó</em>. Tu información también debería.</p>
+    <span class="cta-pill">Agenda tu consulta →</span>
+    <div class="cta-logo">
+      <img src="icon.png" alt="">
+      <span class="ln"><b>Dra. Laly Brickler</b><small>CIMA · Torre Médica I · Escazú</small></span>
+    </div>
+  </div>
+</div>
+</body></html>

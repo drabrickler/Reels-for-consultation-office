@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F2446;font-family:'Work Sans',sans-serif}
+.frame{position:relative;width:1080px;height:1920px}
+.loop-field{position:absolute;inset:0;opacity:.17;background:
+  radial-gradient(circle at 14% 10%, #E4CCC5 0, transparent 30%),
+  radial-gradient(circle at 88% 16%, #E4CCC5 0, transparent 27%),
+  radial-gradient(circle at 22% 90%, #E4CCC5 0, transparent 28%);
+  pointer-events:none}
+.brand{position:absolute;top:64px;left:64px;display:flex;align-items:center;gap:16px;z-index:3}
+.brand img{width:48px;height:auto;display:block}
+.brand span{font-size:23px;color:#F3E4DE;letter-spacing:.03em;font-weight:600}
+.dots{position:absolute;top:76px;right:64px;display:flex;gap:11px;z-index:3}
+.dot{width:11px;height:11px;border-radius:50%;border:2px solid #E4CCC5}
+.dot.on{background:#E4CCC5}
+
+.body{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 90px;text-align:center}
+.eyebrow{color:#E4CCC5;font-size:26px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;margin-bottom:38px}
+.headline{font-family:'Fraunces',Georgia,serif;font-weight:600;color:#F6F1ED;font-size:80px;line-height:1.1;text-wrap:balance}
+.headline em{font-style:normal;color:#E4CCC5}
+.sub{margin-top:40px;font-size:30px;color:#F3E4DE;line-height:1.45;max-width:780px}
+</style></head>
+<body>
+<div class="frame">
+  <div class="loop-field"></div>
+  <div class="brand"><img src="icon.png" alt=""><span>DRA. LALY BRICKLER</span></div>
+  <div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+  <div class="body">
+    <span class="eyebrow">Día Mundial de la Menopausia · 18 oct</span>
+    <p class="headline">La FDA acaba de <em>revertir</em> una advertencia de hace 22 años.</p>
+    <p class="sub">Y este año hay una noticia que muy pocas mujeres conocen.</p>
+  </div>
+</div>
+</body></html>
