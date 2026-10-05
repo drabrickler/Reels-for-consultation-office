@@ -110,6 +110,7 @@ Paleta aprobada: **predominio rosa/palo rosa sobre navy** (más superficie rosa 
 - Storyboard visual de referencia (5 cuadros, con logo y paleta reales): ver artifact publicado en esta conversación.
 - Paleta final (rosa vívido, no palo rosa): fondo `#F9D5E3` · tarjetas `#EC7FA9` · acento/CTA `#D63384` · navy `#13284A`.
 - Cuadros finales exportados en 1080×1920, listos para usar como overlays/portada en el editor de video: `reels/assets/octubre-cancer-mama/01-gancho.png` a `05-cta.png`.
+- Cada cuadro incluye el lazo rosa de concientización (recortado, sin fondo) en la esquina superior derecha como detalle discreto (`reels/assets/octubre-cancer-mama/ribbon-icon.png`).
 
 ---
 
