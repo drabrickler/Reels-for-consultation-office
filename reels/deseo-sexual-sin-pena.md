@@ -6,10 +6,10 @@ Paleta de marca: Azul navy (#0F2446) + Palo rosa (#E4CCC5) + Hueso (#F6F1ED)
 
 ## 1. Gancho (0–4 seg)
 **Texto en pantalla:**
-> No estás rota.
+> Tiene nombre. Tiene manejo.
 
 **Locución:**
-> "Si sientes que tu deseo sexual 'desapareció', no estás rota — probablemente hay una causa, y tiene manejo."
+> "Si sientes que tu deseo sexual 'desapareció', no estás sola — y esto no es casualidad. Tiene nombre, y tiene manejo."
 
 **Visual sugerido:** Primer plano a cámara, tono cercano y directo — sin sonreír de más, esto se dice en serio. Fondo navy de marca.
 
@@ -58,7 +58,7 @@ Audio en tendencia, tono íntimo/conversacional — nada de ritmo "divertido" o 
 
 ## Caption para el post
 
-Si sientes que tu deseo sexual "desapareció", no estás rota. 🩷
+Si sientes que tu deseo sexual "desapareció", no estás sola. 🩷
 
 La libido cambia con los anticonceptivos hormonales, después del parto, con el estrés y con la edad — son causas médicas reales, no un defecto tuyo.
 
