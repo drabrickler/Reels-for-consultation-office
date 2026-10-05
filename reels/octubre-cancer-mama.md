@@ -112,6 +112,8 @@ Paleta aprobada: **predominio rosa/palo rosa sobre navy** (más superficie rosa 
 - Cuadros finales exportados en 1080×1920, listos para usar como overlays/portada en el editor de video: `reels/assets/octubre-cancer-mama/01-gancho.png` a `05-cta.png`.
 - Cada cuadro incluye el lazo rosa de concientización (recortado, sin fondo) en la esquina superior derecha como detalle discreto (`reels/assets/octubre-cancer-mama/ribbon-icon.png`).
 - Cuadro 1 (gancho) rediseñado: la foto del lazo (`ribbon-photo.png`) ahora es el fondo completo a pantalla completa (sin logo), con el titular y la firma superpuestos en navy/rosa para contraste.
+- Cuadro 4 (tu rol): foto real de un equipo de mamografía (`mammo-photo.png`) como fondo completo, con un velo rosa semitransparente y una tarjeta blanca "frosted" sobre la parte inferior que contiene el titular y el checklist, para máxima legibilidad.
+- Cuadro 5 (cierre): se reemplazó el logo por una foto circular de la Dra. Brickler (`headshot-square.png`) con borde rosa, junto a su nombre.
 
 ---
 
