@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F2446;font-family:'Work Sans',sans-serif}
+.frame{position:relative;width:1080px;height:1920px}
+.photo-layer{position:absolute;inset:0;background-image:url('foto1.webp');background-size:cover;background-position:center 22%;z-index:0}
+.photo-tint{position:absolute;inset:0;background:#0F2446;opacity:.22;mix-blend-mode:multiply;z-index:1}
+.photo-scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,24,51,0) 0%, rgba(8,24,51,0) 36%, rgba(8,24,51,.62) 66%, rgba(8,24,51,.96) 100%);z-index:1}
+.frame-body{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:0 72px 110px;gap:40px}
+.hook-text{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:74px;line-height:1.14;color:#F6F1ED;max-width:880px;text-wrap:balance}
+.hook-text em{font-style:normal;color:#E4CCC5}
+.hook-cred{display:flex;align-items:center;gap:20px}
+.hook-cred img{width:58px;height:auto;display:block}
+.hook-cred span{font-size:23px;color:#F3E4DE;letter-spacing:.04em;font-weight:500}
+</style></head>
+<body>
+<div class="frame">
+  <div class="photo-layer"></div>
+  <div class="photo-tint"></div>
+  <div class="photo-scrim"></div>
+  <div class="frame-body">
+    <p class="hook-text">No existe<br>"el mejor método".<br>Existe el mejor método<br>para <em>TU cuerpo.</em></p>
+    <div class="hook-cred">
+      <img src="icon.png" alt="">
+      <span>DRA. LALY BRICKLER</span>
+    </div>
+  </div>
+</div>
+</body></html>

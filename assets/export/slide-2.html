@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F2446;font-family:'Work Sans',sans-serif}
+.frame{position:relative;width:1080px;height:1920px;display:flex;flex-direction:column}
+.frame-photo-top{position:relative;flex:0 0 700px;background-image:url('foto2.webp');background-size:cover;background-position:center 32%;z-index:0}
+.frame-photo-top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,36,70,0) 50%, #0F2446 100%)}
+.frame-body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;padding:58px 56px 50px;z-index:2}
+.table-title{font-family:'Fraunces',Georgia,serif;color:#F6F1ED;font-size:44px;font-weight:600;text-align:center;margin-bottom:38px}
+
+.table-card{
+  width:100%;
+  background:linear-gradient(165deg, rgba(228,204,197,.12), rgba(228,204,197,.03));
+  border:1px solid rgba(228,204,197,.28);
+  border-radius:36px;
+  padding:40px 30px 34px;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.4);
+}
+.col-headers{display:grid;grid-template-columns:30% 23.33% 23.33% 23.33%;align-items:end;margin-bottom:28px}
+.chip{
+  justify-self:center;
+  background:#E4CCC5;
+  color:#081833;
+  font-weight:700;
+  font-size:20px;
+  letter-spacing:.02em;
+  padding:9px 0;
+  width:92%;
+  text-align:center;
+  border-radius:999px;
+}
+.row{display:grid;grid-template-columns:30% 23.33% 23.33% 23.33%;align-items:center;padding:30px 0;border-top:1px solid rgba(228,204,197,.18)}
+.row:first-of-type{border-top:1px solid rgba(228,204,197,.18)}
+.row-label{display:flex;align-items:center;gap:12px;color:#F3E4DE;font-size:23px;font-weight:600}
+.row-label svg{flex:none}
+.cell{text-align:center;font-family:'Fraunces',Georgia,serif;color:#F6F1ED;font-size:34px;font-weight:600;font-variant-numeric:tabular-nums}
+.cell.hi{
+  color:#0F2446;
+  background:#E4CCC5;
+  display:inline-block;
+  margin:0 auto;
+  padding:8px 4px;
+  border-radius:16px;
+  width:88%;
+  font-weight:700;
+}
+.cell-wrap{display:flex;justify-content:center}
+
+.table-foot{font-size:19px;color:#F3E4DE;opacity:.68;text-align:center;line-height:1.5;max-width:760px;margin-top:26px}
+.table-close{margin-top:40px;font-family:'Fraunces',Georgia,serif;font-style:italic;color:#E4CCC5;font-size:26px;text-align:center;max-width:720px;line-height:1.4}
+</style></head>
+<body>
+<div class="frame">
+  <div class="frame-photo-top"></div>
+  <div class="frame-body">
+    <p class="table-title">Comparativo rápido</p>
+    <div class="table-card">
+      <div class="col-headers">
+        <span></span>
+        <span class="chip">DIU</span>
+        <span class="chip">Implante</span>
+        <span class="chip">Pastilla</span>
+      </div>
+      <div class="row">
+        <div class="row-label">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E4CCC5" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          Duración
+        </div>
+        <div class="cell-wrap"><span class="cell hi">3–10 años</span></div>
+        <div class="cell-wrap"><span class="cell hi">3 años</span></div>
+        <div class="cell-wrap"><span class="cell">Diaria</span></div>
+      </div>
+      <div class="row">
+        <div class="row-label">
+          <svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="#E4CCC5" stroke-width="2"><path d="M12 2l8 3.2v6C20 17 16.6 21.4 12 24 7.4 21.4 4 17 4 11.2v-6L12 2z"/><path d="M8.5 12.5l2.3 2.3L16 9.5"/></svg>
+          Efectividad
+        </div>
+        <div class="cell-wrap"><span class="cell hi">+99%</span></div>
+        <div class="cell-wrap"><span class="cell hi">+99%</span></div>
+        <div class="cell-wrap"><span class="cell">91–99%*</span></div>
+      </div>
+    </div>
+    <p class="table-foot">*Uso típico vs. uso perfecto. Candidatura real: en consulta.</p>
+    <p class="table-close">"Esta tabla no sabe tu historia clínica. Tu ginecóloga sí."</p>
+  </div>
+</div>
+</body></html>
