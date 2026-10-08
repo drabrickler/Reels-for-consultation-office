@@ -276,6 +276,13 @@ footer .fine a{text-decoration:underline}
 .acc-body ul{list-style:none;margin-top:12px}
 .acc-body li{position:relative;padding:8px 0 8px 28px;border-bottom:1px solid rgba(15,36,70,.08);color:var(--ink);font-size:16px}
 .acc-body li::before{content:"";position:absolute;left:2px;top:17px;width:12px;height:7px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg)}
+
+.gal{position:relative}
+.gal img{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease)}
+.gal img.on{opacity:1}
+.gal-dots{position:absolute;left:0;right:0;bottom:14px;display:flex;gap:8px;justify-content:center;z-index:2}
+.gal-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer;transition:background .3s,transform .3s,width .3s}
+.gal-dots button.on{background:#fff;width:26px;border-radius:5px}
 @media (max-width:900px){.acc-body{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.acc-panel,.acc-body{transition:none}}
 
@@ -394,7 +401,12 @@ footer .fine a{text-decoration:underline}
       <div class="acc-item" id="gineco">
         <button class="acc-head" id="h-gineco" aria-expanded="false" aria-controls="p-gineco"><span class="acc-num">02</span><span class="acc-title">Ginecología</span><span class="acc-icon" aria-hidden="true"></span></button>
         <div class="acc-panel" id="p-gineco" role="region" aria-labelledby="h-gineco"><div class="acc-inner"><div class="acc-body">
-          <div class="acc-img"><img src="assets/ginecologia.webp" alt="La Dra. Brickler en su sala de consulta" loading="lazy" width="1400" height="1050"></div>
+          <div class="acc-img gal" data-gal>
+            <img class="on" src="assets/gineco-colposcopio.webp" alt="La Dra. Brickler realizando una colposcopia" loading="lazy" width="1400" height="1050">
+            <img src="assets/gineco-lampara.webp" alt="La Dra. Brickler preparando una muestra bajo lámpara de consulta" loading="lazy" width="1400" height="1050">
+            <img src="assets/gineco-ecografia.webp" alt="La Dra. Brickler frente al equipo de ecografía" loading="lazy" width="1400" height="1050">
+            <div class="gal-dots" role="tablist" aria-label="Fotos de ginecología"><button class="on" aria-label="Foto 1"></button><button aria-label="Foto 2"></button><button aria-label="Foto 3"></button></div>
+          </div>
           <div>
             <h3>Chequeos y diagnósticos con trato humano.</h3>
             <p>Atención ginecológica completa, en un espacio sin juicios y con tiempo para tus preguntas.</p>
@@ -610,6 +622,15 @@ footer .fine a{text-decoration:underline}
     });
   });
   if(location.hash){var t=document.querySelector(location.hash);if(t&&t.classList.contains('acc-item')){accItems.forEach(function(o){setOpen(o,o===t)})}}
+
+
+  /* photo galleries inside care areas */
+  $$('[data-gal]').forEach(function(g){
+    var imgs=$$('img',g),dots=$$('.gal-dots button',g),i=0,timer=0;
+    function show(n){i=(n+imgs.length)%imgs.length;imgs.forEach(function(im,k){im.classList.toggle('on',k===i)});dots.forEach(function(d,k){d.classList.toggle('on',k===i)})}
+    dots.forEach(function(d,k){d.addEventListener('click',function(e){e.stopPropagation();show(k)})});
+    g.addEventListener('click',function(){show(i+1)});
+  });
 
   /* finder */
   var DATA={
