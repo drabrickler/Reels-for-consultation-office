@@ -285,6 +285,26 @@ footer .fine a{text-decoration:underline}
 .gal-dots{position:absolute;left:0;right:0;bottom:14px;display:flex;gap:8px;justify-content:center;z-index:2}
 .gal-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer;transition:background .3s,transform .3s,width .3s}
 .gal-dots button.on{background:#fff;width:26px;border-radius:5px}
+
+/* ---------- Area tiles: nothing shows until one is chosen ---------- */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:44px}
+.tile{font:inherit;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:8px;min-height:230px;padding:26px 24px;border-radius:22px;border:1px solid rgba(15,36,70,.15);background:linear-gradient(160deg,var(--ivory),var(--blush-2));color:var(--navy);transition:transform .45s var(--ease),box-shadow .45s,border-color .3s,background .3s}
+.tile:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(120,80,80,.18);border-color:var(--gold)}
+.tile:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.tile-num{font-family:var(--display);color:var(--gold);font-size:22px}
+.tile-title{font-family:var(--display);font-weight:500;font-size:clamp(23px,2vw,28px);line-height:1.1}
+.tile-sub{font-size:14px;color:var(--muted);line-height:1.45}
+.tile-go{margin-top:auto;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--navy);display:flex;gap:8px;align-items:center}
+.tile-go i{font-style:normal;color:var(--gold);transition:transform .35s var(--ease)}
+.tile:hover .tile-go i{transform:translateX(5px)}
+.tile[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tile[aria-pressed="true"] .tile-sub{color:rgba(255,255,255,.75)}
+.tile[aria-pressed="true"] .tile-go{color:#fff}
+.acc{border-top:0;margin-top:34px;scroll-margin-top:90px}
+.acc-item:not(.open){display:none}
+.acc-item.open{display:block;animation:appear .7s var(--ease);border-top:1px solid rgba(15,36,70,.18)}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (min-width:1000px){.tiles{grid-template-columns:repeat(5,1fr);gap:12px}.tile{padding:22px 18px;min-height:250px}.tile-title{font-size:clamp(21px,1.75vw,25px)}.tile-go{font-size:11px;letter-spacing:.12em}}
 @media (max-width:900px){.acc-body{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.acc-panel,.acc-body{transition:none}}
 
@@ -310,6 +330,8 @@ footer .fine a{text-decoration:underline}
   .steps .line{left:19px}
 }
 @media (max-width:520px){
+  .tile{min-height:0;padding:22px 20px}
+  .tiles{gap:12px;margin-top:34px}
   body{font-size:16px}
   .nav img{height:36px}
   .nav .btn{padding:9px 16px}
@@ -394,10 +416,11 @@ footer .fine a{text-decoration:underline}
 <section class="block areas" id="servicios">
   <div class="wrap">
     <span class="eyebrow rv">Áreas de atención</span>
-    <h2 class="title rv d1">Toca una área y mira qué hago en ella.</h2>
-    <div class="acc rv" id="acc">
-      <div class="acc-item open" id="peri">
-        <button class="acc-head" id="h-peri" aria-expanded="true" aria-controls="p-peri"><span class="acc-num">01</span><span class="acc-title">Perimenopausia, menopausia y terapia hormonal</span><span class="acc-icon" aria-hidden="true"></span></button>
+    <h2 class="title rv d1">Elige un área para ver lo que hago.</h2>
+    <div class="tiles" id="tiles" role="group" aria-label="Áreas de atención"><button class="tile" data-target="peri" aria-pressed="false"><span class="tile-num">01</span><span class="tile-title">Perimenopausia, menopausia y terapia hormonal</span><span class="tile-sub">Evaluación y plan personalizado</span><span class="tile-go">Ver lo que hago <i aria-hidden="true">→</i></span></button><button class="tile" data-target="gineco" aria-pressed="false"><span class="tile-num">02</span><span class="tile-title">Ginecología</span><span class="tile-sub">Chequeos, diagnóstico y prevención</span><span class="tile-go">Ver lo que hago <i aria-hidden="true">→</i></span></button><button class="tile" data-target="estetica" aria-pressed="false"><span class="tile-num">03</span><span class="tile-title">Estética ginecológica</span><span class="tile-sub">Procedimientos evaluados con calma</span><span class="tile-go">Ver lo que hago <i aria-hidden="true">→</i></span></button><button class="tile" data-target="obstetricia" aria-pressed="false"><span class="tile-num">04</span><span class="tile-title">Obstetricia y control prenatal</span><span class="tile-sub">Embarazo, parto y posparto</span><span class="tile-go">Ver lo que hago <i aria-hidden="true">→</i></span></button><button class="tile" data-target="cirugia" aria-pressed="false"><span class="tile-num">05</span><span class="tile-title">Cirugías</span><span class="tile-sub">Ginecológica y obstétrica</span><span class="tile-go">Ver lo que hago <i aria-hidden="true">→</i></span></button></div>
+    <div class="acc" id="acc">
+      <div class="acc-item" id="peri">
+        <button class="acc-head" id="h-peri" aria-expanded="false" aria-controls="p-peri"><span class="acc-num">01</span><span class="acc-title">Perimenopausia, menopausia y terapia hormonal</span><span class="acc-icon" aria-hidden="true"></span></button>
         <div class="acc-panel" id="p-peri" role="region" aria-labelledby="h-peri"><div class="acc-inner"><div class="acc-body">
           <div class="acc-img gal tall" data-gal>
             <img class="on" src="assets/perimenopausia-mujer.webp" alt="Mujer madura sonriendo con serenidad" loading="lazy" width="918" height="1030">
@@ -634,27 +657,31 @@ footer .fine a{text-decoration:underline}
   addEventListener('scroll',stepsLine,{passive:true});stepsLine();
 
 
-  /* care-area accordion: one open at a time */
-  var accItems=$$('.acc-item');
-  function setOpen(item,open){
-    item.classList.toggle('open',open);
-    $('.acc-head',item).setAttribute('aria-expanded',String(open));
+  /* care areas: tiles reveal one branch at a time; nothing shows until chosen */
+  var accItems=$$('.acc-item'),tiles=$$('.tile');
+  function openBranch(id){
+    accItems.forEach(function(it){
+      var on=it.id===id;
+      it.classList.toggle('open',on);
+      $('.acc-head',it).setAttribute('aria-expanded',String(on));
+    });
+    tiles.forEach(function(t){t.setAttribute('aria-pressed',String(t.dataset.target===id))});
   }
-  accItems.forEach(function(item){
-    $('.acc-head',item).addEventListener('click',function(){
-      var willOpen=!item.classList.contains('open');
-      accItems.forEach(function(o){setOpen(o,false)});
-      if(willOpen){
-        setOpen(item,true);
-        setTimeout(function(){
-          var r=item.getBoundingClientRect();
-          if(r.top<80||r.top>window.innerHeight*0.5){window.scrollTo({top:window.scrollY+r.top-90,behavior:'smooth'})}
-        },120);
-      }
+  tiles.forEach(function(t){
+    t.addEventListener('click',function(){
+      var id=t.dataset.target,it=document.getElementById(id);
+      if(it.classList.contains('open')){openBranch(null);return}
+      openBranch(id);
+      setTimeout(function(){
+        var r=$('#acc').getBoundingClientRect();
+        window.scrollTo({top:window.scrollY+r.top-90,behavior:'smooth'});
+      },60);
     });
   });
-  if(location.hash){var t=document.querySelector(location.hash);if(t&&t.classList.contains('acc-item')){accItems.forEach(function(o){setOpen(o,o===t)})}}
-
+  accItems.forEach(function(it){
+    $('.acc-head',it).addEventListener('click',function(){openBranch(null);var r=$('#tiles').getBoundingClientRect();window.scrollTo({top:window.scrollY+r.top-110,behavior:'smooth'})});
+  });
+  if(location.hash){var h=document.querySelector(location.hash);if(h&&h.classList.contains('acc-item')){openBranch(h.id)}}
 
   /* photo galleries inside care areas */
   $$('[data-gal]').forEach(function(g){
