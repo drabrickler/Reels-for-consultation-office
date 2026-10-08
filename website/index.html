@@ -9,7 +9,7 @@
 <meta property="og:description" content="Una consulta pensada para ti. Perimenopausia, menopausia, terapia hormonal, fertilidad y control prenatal en Escazú.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/hero-end.jpg">
-<meta name="theme-color" content="#0F2446">
+<meta name="theme-color" content="#F6DAD8">
 <link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
 :root{
   --navy:#0F2446;
   --navy-2:#173260;
-  --blush:#E8D6CD;
-  --blush-2:#F3E8E1;
-  --ivory:#FBF7F2;
-  --sand:#F1E6DA;
+  --blush:#F2DAD8;
+  --blush-2:#FAEDEA;
+  --ivory:#FFF9F8;
+  --sand:#F9E7E5;
   --gold:#B98F45;
   --gold-soft:#D8B979;
   --ink:#1B2740;
@@ -212,11 +212,11 @@ footer .fine a{text-decoration:underline}
 
 
 /* ---------- Theme v2: more blush, navy in small doses ---------- */
-:root{--blush:#EBD7CE;--rose:#DDBDB5;--rose-deep:#C79A97;--ivory:#FCF8F4;--sand:#F4E7DE}
-.nav{background:rgba(244,231,222,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.nav.lifted{box-shadow:0 8px 30px rgba(120,80,80,.16)}
-.nav nav a:not(.btn){color:var(--navy)}
-.nav nav a:not(.btn):hover{color:var(--gold)}
+:root{--blush:#F2DAD8;--rose:#E4BBBD;--rose-deep:#CC9399;--ivory:#FFF9F7;--sand:#F7E6E3}
+.nav{background:rgba(15,36,70,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav.lifted{box-shadow:0 8px 30px rgba(15,36,70,.35)}
+.nav nav a:not(.btn){color:var(--blush)}
+.nav nav a:not(.btn):hover{color:var(--gold-soft)}
 .listen{background:linear-gradient(160deg,var(--blush) 0%,var(--rose) 100%);color:var(--ink)}
 .listen .title{color:var(--navy)}
 .listen .lead{color:#4a3f4a}
@@ -228,14 +228,14 @@ footer .fine a{text-decoration:underline}
 .areas .feature{margin-top:clamp(60px,8vw,110px)}
 .link{display:inline-block;margin-top:22px;color:var(--navy);text-decoration:none;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:4px;transition:color .3s,border-color .3s}
 .link:hover{color:var(--gold)}
-.about{background:linear-gradient(160deg,var(--rose) 0%,var(--blush) 100%);color:var(--ink)}
-.about .title{color:var(--navy)}
-.about p{color:#4a3f4a}
-.facts div{border-top-color:rgba(15,36,70,.35)}
-.facts strong{color:var(--navy)}
-.facts span{color:#4a3f4a}
-.cultures h3{color:var(--navy)}
-.portrait,.cultures .ph{box-shadow:0 30px 70px rgba(120,80,80,.25)}
+.about{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--blush)}
+.about .title{color:#fff}
+.about p{color:rgba(242,218,216,.88)}
+.facts div{border-top-color:rgba(216,185,121,.55)}
+.facts strong{color:#fff}
+.facts span{color:rgba(242,218,216,.8)}
+.cultures h3{color:#fff}
+.portrait,.cultures .ph{box-shadow:0 30px 70px rgba(0,0,0,.35)}
 .finder{background:var(--sand)}
 .final-cta{background:linear-gradient(160deg,var(--rose-deep) 0%,var(--rose) 100%);color:var(--navy)}
 .final-cta .title{color:var(--navy)}
@@ -244,7 +244,7 @@ footer .fine a{text-decoration:underline}
 .final-cta .ring{border-color:rgba(255,255,255,.4)}
 .final-cta .btn{background:var(--navy);box-shadow:0 14px 34px rgba(15,36,70,.3)}
 .final-cta .btn:hover{background:#1b3568}
-.hero-wash{background:linear-gradient(90deg,rgba(252,248,244,.8) 0%,rgba(252,248,244,.5) 28%,rgba(252,248,244,0) 52%)}
+.hero-wash{background:linear-gradient(90deg,rgba(255,249,248,.8) 0%,rgba(255,249,248,.5) 28%,rgba(255,249,248,0) 52%)}
 
 
 /* ---------- Accordion of care areas ---------- */
@@ -317,6 +317,23 @@ footer .fine a{text-decoration:underline}
 .social.light a{border-color:rgba(15,36,70,.45);color:var(--navy)}
 .social.light a:hover{background:var(--navy);color:#fff}
 
+
+/* ---------- Patient reviews ---------- */
+.reviews{background:var(--ivory)}
+.rev-wrap{position:relative;margin-top:44px}
+.rev-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 2px 26px;-webkit-overflow-scrolling:touch}
+.rev-track::-webkit-scrollbar{display:none}
+.rev{flex:0 0 min(86%,400px);scroll-snap-align:start;background:linear-gradient(160deg,#fff,var(--blush-2));border:1px solid rgba(185,143,69,.35);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:18px;transition:transform .5s var(--ease),box-shadow .5s}
+.rev:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(120,80,80,.16)}
+.stars{display:flex;gap:4px}
+.stars svg{width:20px;height:20px;fill:var(--gold)}
+.rev blockquote{font-family:var(--display);font-size:clamp(21px,1.9vw,25px);line-height:1.3;color:var(--navy);font-style:italic}
+.rev figcaption{margin-top:auto;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gold)}
+.rev-nav{display:flex;gap:10px;justify-content:flex-end}
+.rev-nav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:transparent;color:var(--navy);font-size:18px;cursor:pointer;transition:background .3s,color .3s}
+.rev-nav button:hover{background:var(--gold);color:#fff}
+.rev-nav button:focus-visible,.rev-track:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .nav nav a:not(.btn){display:none}
@@ -350,10 +367,11 @@ footer .fine a{text-decoration:underline}
 <body>
 
 <header class="nav" id="nav">
-  <a href="#inicio" aria-label="Dra. Laly Brickler, inicio"><img src="assets/logo-navy.png" alt="Dra. Laly Brickler, Gynecology &amp; Obstetrics" width="590" height="150"></a>
+  <a href="#inicio" aria-label="Dra. Laly Brickler, inicio"><img src="assets/logo-cream.png" alt="Dra. Laly Brickler, Gynecology &amp; Obstetrics" width="590" height="150"></a>
   <nav aria-label="Principal">
     <a href="#consulta">La consulta</a>
     <a href="#servicios">Áreas</a>
+    <a href="#opiniones">Opiniones</a>
     <a href="#doctora">La doctora</a>
     <a href="#preguntas">Preguntas</a>
     <a class="btn" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener">Agendar</a>
@@ -547,6 +565,18 @@ footer .fine a{text-decoration:underline}
   </div>
 </section>
 
+<!-- ================= REVIEWS ================= -->
+<section class="block reviews" id="opiniones">
+  <div class="wrap">
+    <span class="eyebrow rv">Opiniones</span>
+    <h2 class="title rv d1">Lo que dicen mis pacientes.</h2>
+    <div class="rev-wrap rv d2">
+      <div class="rev-track" id="revTrack" tabindex="0" aria-label="Opiniones de pacientes"><figure class="rev"><div class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg></div><blockquote>“Desde mi primera consulta me sentí escuchada y acompañada.<br><br>La Dra. Brickler respondió todas mis dudas con mucha paciencia y profesionalismo. Sin duda la recomiendo.”</blockquote><figcaption>Ana Laura Gonzalez</figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg></div><blockquote>“La mejor experiencia que he tenido. Siempre su trabajo es impecable. Demasiado contenta de ser su paciente, la mejor de todo el país 🙏”</blockquote><figcaption>Ariana Salazar</figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg></div><blockquote>“La doctora Laly, es excelente en su trabajo un excelente ser humano muy dedicada en su labor, la educación y empatia para con las personas refleja preparación y profesionalismo qué uno busca en un médico.”</blockquote><figcaption>Karina Murillo</figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg></div><blockquote>“Llegue a la Dr.Laly por una segunda opinión profesional y literalmente me salvo de una mala praxis. Es una profesional súper actualizada que siempre está buscando cómo mejorar y tener soluciones a favor de sus pacientes. Súper recomendada”</blockquote><figcaption>Mónica Salazar</figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg></div><blockquote>“Excelente profesional, se toma el tiempo de explicar a fondo todo el procedimiento que hace, lo hace con mucha delicadeza y se nota genuina preocupación por su paciente. 100% recomendada! Además el consultorio es muy bonito, limpio y la recepcionista muy amable”</blockquote><figcaption>Rebeca Nelson</figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg></div><blockquote>“Increíblemente profesional y atenta desde la primera cita que tuve para mi hija, hasta con la cirugía y post cirugía que recibió. Recomiendo 100 %”</blockquote><figcaption>Sophie Hardy</figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.700 1.300 6.700L12 17.600 6 20.900l1.300-6.700-5-4.700 6.800-.8L12 2.500Z"/></svg></div><blockquote>“Excelente Profesional, siempre actualizada y sus equipos de primer nivel. Su trato excelente y dulce.<br>Siempre pendiente de la evolución de uno como paciente.<br>Super recomendada 💖”</blockquote><figcaption>Vivian Villagra</figcaption></figure></div>
+      <div class="rev-nav"><button id="revPrev" aria-label="Opinión anterior">←</button><button id="revNext" aria-label="Opinión siguiente">→</button></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= ABOUT ================= -->
 <section class="block about" id="doctora">
   <div class="wrap">
@@ -690,6 +720,13 @@ footer .fine a{text-decoration:underline}
     dots.forEach(function(d,k){d.addEventListener('click',function(e){e.stopPropagation();show(k)})});
     g.addEventListener('click',function(){show(i+1)});
   });
+
+
+  /* patient reviews carousel */
+  var rt=$('#revTrack');
+  function revStep(d){var c=$('.rev',rt);rt.scrollBy({left:d*(c.offsetWidth+20),behavior:'smooth'})}
+  $('#revPrev').addEventListener('click',function(){revStep(-1)});
+  $('#revNext').addEventListener('click',function(){revStep(1)});
 
   /* finder */
   var DATA={
