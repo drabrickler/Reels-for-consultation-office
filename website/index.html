@@ -268,7 +268,7 @@ footer .fine a{text-decoration:underline}
 .acc-item.open .acc-body{opacity:1;transform:none}
 .acc-img{border-radius:24px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 26px 60px rgba(120,80,80,.22)}
 .acc-img img{width:100%;height:100%;object-fit:cover}
-.acc-img.tall{display:block;aspect-ratio:4/5;max-width:440px;justify-self:center;transition:transform .5s var(--ease)}
+.acc-img.tall{display:block;aspect-ratio:4/5;width:min(100%,440px);max-width:440px;justify-self:center;transition:transform .5s var(--ease)}
 .acc-img.tall:hover{transform:translateY(-4px)}
 .acc-body h3{font-size:clamp(26px,2.8vw,38px)}
 .acc-body p{margin-top:12px;color:var(--muted);max-width:46ch}
@@ -280,6 +280,8 @@ footer .fine a{text-decoration:underline}
 .gal{position:relative}
 .gal img{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease)}
 .gal img.on{opacity:1}
+.gal.tall img{object-fit:cover;object-position:50% 30%}
+.gal.tall img[data-fit]{object-fit:contain;background:var(--blush-2);object-position:center}
 .gal-dots{position:absolute;left:0;right:0;bottom:14px;display:flex;gap:8px;justify-content:center;z-index:2}
 .gal-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer;transition:background .3s,transform .3s,width .3s}
 .gal-dots button.on{background:#fff;width:26px;border-radius:5px}
@@ -419,7 +421,12 @@ footer .fine a{text-decoration:underline}
       <div class="acc-item" id="estetica">
         <button class="acc-head" id="h-estetica" aria-expanded="false" aria-controls="p-estetica"><span class="acc-num">03</span><span class="acc-title">Estética ginecológica</span><span class="acc-icon" aria-hidden="true"></span></button>
         <div class="acc-panel" id="p-estetica" role="region" aria-labelledby="h-estetica"><div class="acc-inner"><div class="acc-body">
-          <div class="acc-img"><img src="assets/terapia.webp" alt="Vaso de agua con borde dorado y flores de cerezo sobre mármol" loading="lazy" width="1400" height="1050"></div>
+          <div class="acc-img gal tall" data-gal>
+            <img class="on" src="assets/estetica-1.webp" alt="La Dra. Brickler preparando un procedimiento en su consultorio" loading="lazy" width="1000" height="1288">
+            <img src="assets/estetica-3.webp" alt="Infografía sobre el tamaño y la asimetría de los labios menores y las molestias que pueden causar" loading="lazy" width="720" height="1080" data-fit="1">
+            <img src="assets/estetica-2.webp" alt="La Dra. Brickler utilizando un equipo láser" loading="lazy" width="1000" height="1644">
+            <div class="gal-dots" role="tablist" aria-label="Fotos de estética ginecológica"><button class="on" aria-label="Foto 1"></button><button aria-label="Foto 2"></button><button aria-label="Foto 3"></button></div>
+          </div>
           <div>
             <h3>Sentirte cómoda y segura en tu cuerpo.</h3>
             <p>Cada procedimiento se indica después de una evaluación, con una explicación clara de qué es, qué esperar y qué alternativas existen. Primero conversamos, después decidimos.</p>
