@@ -68,7 +68,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;color:var(-
 .cap p{margin-top:18px;font-size:clamp(16px,1.35vw,20px);color:var(--ink);max-width:30ch}
 .cap .eyebrow{display:block;margin-bottom:18px}
 .cap .btn{margin-top:30px}
-.cap .meta{display:block;margin-top:18px;font-size:13px;letter-spacing:.1em;color:var(--muted)}
+.cap .meta{display:block;margin-top:18px;font-size:13px;letter-spacing:.1em;color:var(--muted);max-width:34ch;line-height:1.7}
 .scroll-hint{position:absolute;left:var(--gutter);bottom:34px;display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--navy);transition:opacity .5s}
 .scroll-hint i{display:block;width:1px;height:46px;background:var(--navy);transform-origin:top;animation:drip 2.2s var(--ease) infinite}
 @keyframes drip{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
@@ -210,6 +210,42 @@ footer .fine a{text-decoration:underline}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:28px;height:28px;fill:currentColor}
 
+
+/* ---------- Theme v2: more blush, navy in small doses ---------- */
+:root{--blush:#EBD7CE;--rose:#DDBDB5;--rose-deep:#C79A97;--ivory:#FCF8F4;--sand:#F4E7DE}
+.nav{background:rgba(244,231,222,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav.lifted{box-shadow:0 8px 30px rgba(120,80,80,.16)}
+.nav nav a:not(.btn){color:var(--navy)}
+.nav nav a:not(.btn):hover{color:var(--gold)}
+.listen{background:linear-gradient(160deg,var(--blush) 0%,var(--rose) 100%);color:var(--ink)}
+.listen .title{color:var(--navy)}
+.listen .lead{color:#4a3f4a}
+.listen .glow{background:radial-gradient(circle,rgba(255,255,255,.45),transparent 65%)}
+.quote{border-color:rgba(15,36,70,.18);background:rgba(255,255,255,.4)}
+.quote:hover{border-color:var(--gold);background:rgba(255,255,255,.6)}
+.quote q{color:var(--navy)}
+.quote span{color:#4a3f4a}
+.areas .feature{margin-top:clamp(60px,8vw,110px)}
+.link{display:inline-block;margin-top:22px;color:var(--navy);text-decoration:none;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:4px;transition:color .3s,border-color .3s}
+.link:hover{color:var(--gold)}
+.about{background:linear-gradient(160deg,var(--rose) 0%,var(--blush) 100%);color:var(--ink)}
+.about .title{color:var(--navy)}
+.about p{color:#4a3f4a}
+.facts div{border-top-color:rgba(15,36,70,.35)}
+.facts strong{color:var(--navy)}
+.facts span{color:#4a3f4a}
+.cultures h3{color:var(--navy)}
+.portrait,.cultures .ph{box-shadow:0 30px 70px rgba(120,80,80,.25)}
+.finder{background:var(--sand)}
+.final-cta{background:linear-gradient(160deg,var(--rose-deep) 0%,var(--rose) 100%);color:var(--navy)}
+.final-cta .title{color:var(--navy)}
+.final-cta .lead{color:#3d3343}
+.final-cta .eyebrow{color:var(--navy)}
+.final-cta .ring{border-color:rgba(255,255,255,.4)}
+.final-cta .btn{background:var(--navy);box-shadow:0 14px 34px rgba(15,36,70,.3)}
+.final-cta .btn:hover{background:#1b3568}
+.hero-wash{background:linear-gradient(90deg,rgba(252,248,244,.8) 0%,rgba(252,248,244,.5) 28%,rgba(252,248,244,0) 52%)}
+
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .nav nav a:not(.btn){display:none}
@@ -241,10 +277,10 @@ footer .fine a{text-decoration:underline}
 <body>
 
 <header class="nav" id="nav">
-  <a href="#inicio" aria-label="Dra. Laly Brickler, inicio"><img src="assets/logo.png" alt="Dra. Laly Brickler, Gynecology &amp; Obstetrics" width="590" height="150"></a>
+  <a href="#inicio" aria-label="Dra. Laly Brickler, inicio"><img src="assets/logo-navy.png" alt="Dra. Laly Brickler, Gynecology &amp; Obstetrics" width="590" height="150"></a>
   <nav aria-label="Principal">
     <a href="#consulta">La consulta</a>
-    <a href="#servicios">Servicios</a>
+    <a href="#servicios">Áreas</a>
     <a href="#doctora">La doctora</a>
     <a href="#preguntas">Preguntas</a>
     <a class="btn" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener">Agendar</a>
@@ -279,7 +315,7 @@ footer .fine a{text-decoration:underline}
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.45 15.05L2 22l5.1-1.34A9.9 9.9 0 1 0 12.04 2Zm5.8 14.05c-.25.7-1.45 1.34-2 1.4-.52.06-1.17.09-1.9-.12a17.3 17.3 0 0 1-1.73-.64c-3.04-1.31-5.02-4.37-5.17-4.57-.15-.2-1.23-1.64-1.23-3.13 0-1.48.78-2.21 1.06-2.5.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.51.25.6.84 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.51-.15.15-.3.31-.13.6.17.3.77 1.26 1.65 2.04 1.13 1 2.09 1.31 2.38 1.46.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.12.07.72-.18 1.42Z"/></svg>
           Agendar por WhatsApp
         </a>
-        <span class="meta">Torre Médica I, Hospital CIMA · Escazú · Lunes a viernes, con cita</span>
+        <span class="meta">Torre Médica I, Hospital CIMA · Escazú · Lunes a viernes, 9 am a 6 pm, con cita</span>
       </div>
     </div>
 
@@ -303,61 +339,61 @@ footer .fine a{text-decoration:underline}
   </div>
 </section>
 
-<!-- ================= FEATURES ================= -->
-<section class="block">
+<!-- ================= AREAS ================= -->
+<section class="block areas" id="servicios">
   <div class="wrap">
-    <span class="eyebrow rv">Áreas de enfoque</span>
-    <h2 class="title rv d1">Atención según lo que quieres para tu vida.</h2>
+    <span class="eyebrow rv">Áreas de atención</span>
+    <h2 class="title rv d1">Cada etapa, con la misma atención.</h2>
     <span class="rule rv"></span>
-
-    <div class="feature">
-      <div class="ph rv"><img src="assets/perimenopausia.webp" alt="Orquídea blanca en un florero dorado sobre mármol" loading="lazy" width="1600" height="905"></div>
+    <div class="feature" id="peri">
+      <div class="ph rv"><img src="assets/perimenopausia.webp" alt="Orquídea blanca en un florero dorado sobre mármol" loading="lazy" width="1400" height="1050"></div>
       <div class="rv d1">
-        <span class="eyebrow">Perimenopausia y menopausia</span>
+        <span class="eyebrow">Perimenopausia, menopausia y terapia hormonal</span>
         <h3>Entender esta etapa, sin que te la minimicen.</h3>
-        <p>Evaluación completa de tus síntomas, tu historia y tus metas. Defino contigo un plan que cabe en tu vida, con o sin hormonas.</p>
-        <div class="tags"><span>Sofocos</span><span>Sueño</span><span>Estado de ánimo</span><span>Salud ósea</span><span>Sexualidad</span></div>
+        <p>Evaluación completa de tus síntomas, tu historia y tus metas. Si la terapia hormonal tiene sentido para ti, se indica de forma personalizada: la vía, la dosis y el seguimiento correctos para tu caso. Y si prefieres no usarla, revisamos otras opciones.</p>
+        <div class="tags"><span>Sofocos</span><span>Sueño</span><span>Estado de ánimo</span><span>Salud ósea</span><span>Terapia hormonal personalizada</span><span>Opciones sin hormonas</span></div>
+        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20por%20perimenopausia%20o%20menopausia." target="_blank" rel="noopener">Consultar por WhatsApp</a>
       </div>
     </div>
-
-    <div class="feature flip">
-      <div class="ph rv"><img src="assets/terapia.webp" alt="Vaso de agua con borde dorado y flores de cerezo sobre mármol" loading="lazy" width="1600" height="905"></div>
+    <div class="feature flip" id="gineco">
+      <div class="ph rv"><img src="assets/ginecologia.webp" alt="La Dra. Brickler en su sala de consulta" loading="lazy" width="1400" height="1050"></div>
       <div class="rv d1">
-        <span class="eyebrow">Terapia hormonal personalizada</span>
-        <h3>La dosis y la vía correctas para ti, no una receta general.</h3>
-        <p>Me apasiona la endocrinología y la fisiología femenina. Por eso la terapia hormonal se indica, se ajusta y se revisa según tu caso, y solo si tiene sentido para ti.</p>
-        <div class="tags"><span>Evaluación individual</span><span>Seguimiento</span><span>Opciones sin hormonas</span></div>
+        <span class="eyebrow">Ginecología</span>
+        <h3>Chequeos y diagnósticos con trato humano.</h3>
+        <p>Revisión ginecológica, papanicolaou y prevención. También ciclos irregulares, trastornos hormonales, patología cervical, incontinencia, prolapso, planificación familiar y salud sexual, en un espacio sin juicios.</p>
+        <div class="tags"><span>Chequeo anual</span><span>Papanicolaou</span><span>Patología cervical</span><span>Trastornos hormonales</span><span>Incontinencia y prolapso</span><span>Planificación familiar</span><span>Sexualidad</span></div>
+        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20de%20ginecolog%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp</a>
       </div>
     </div>
-
-    <div class="feature">
-      <div class="ph rv"><img src="assets/prenatal.webp" alt="Manta tejida crema junto a un espejo dorado y flores blancas" loading="lazy" width="1600" height="905"></div>
+    <div class="feature" id="estetica">
+      <div class="ph rv"><img src="assets/terapia.webp" alt="Vaso de agua con borde dorado y flores de cerezo sobre mármol" loading="lazy" width="1400" height="1050"></div>
       <div class="rv d1">
-        <span class="eyebrow">Embarazo y familia</span>
+        <span class="eyebrow">Estética ginecológica</span>
+        <h3>Sentirte cómoda y segura en tu cuerpo.</h3>
+        <p>Opciones de estética y bienestar ginecológico, evaluadas con calma y según lo que tú buscas. Primero conversamos, después decidimos.</p>
+        <div class="tags"><span>Evaluación personalizada</span><span>Bienestar íntimo</span></div>
+        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20informaci%C3%B3n%20sobre%20est%C3%A9tica%20ginecol%C3%B3gica." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="feature flip" id="obstetricia">
+      <div class="ph rv"><img src="assets/prenatal.webp" alt="Manta tejida crema junto a un espejo dorado y flores blancas" loading="lazy" width="1400" height="1050"></div>
+      <div class="rv d1">
+        <span class="eyebrow">Obstetricia</span>
         <h3>Control prenatal cercano, con tiempo para tus preguntas.</h3>
-        <p>Desde planificar un embarazo hasta el parto y el posparto. También planificación familiar y salud reproductiva, según lo que tú busques.</p>
-        <div class="tags"><span>Control prenatal</span><span>Fertilidad</span><span>Planificación familiar</span></div>
+        <p>Desde planificar un embarazo hasta el parto y el posparto. Seguimiento cercano, explicado en palabras claras, y espacio para todas tus dudas.</p>
+        <div class="tags"><span>Control prenatal</span><span>Fertilidad</span><span>Parto y posparto</span></div>
+        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20de%20obstetricia." target="_blank" rel="noopener">Consultar por WhatsApp</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="block services" id="servicios">
-  <div class="wrap">
-    <span class="eyebrow rv">Servicios</span>
-    <h2 class="title rv d1">Ginecología y obstetricia, clínica y quirúrgica.</h2>
-    <div class="grid">
-      <article class="card rv"><svg viewBox="0 0 40 40"><path d="M20 6c6 7 9 11 9 16a9 9 0 0 1-18 0c0-5 3-9 9-16Z"/><path d="M15 24a5 5 0 0 0 5 5"/></svg><h3>Perimenopausia y menopausia</h3><p>Síntomas, bienestar y salud a largo plazo.</p></article>
-      <article class="card rv d1"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="13"/><path d="M20 10v10l6 4"/></svg><h3>Trastornos hormonales</h3><p>Ciclos irregulares, síndrome de ovario poliquístico, tiroides y más.</p></article>
-      <article class="card rv d2"><svg viewBox="0 0 40 40"><path d="M20 33S7 25 7 15a7 7 0 0 1 13-3.5A7 7 0 0 1 33 15c0 10-13 18-13 18Z"/></svg><h3>Salud reproductiva y fertilidad</h3><p>Evaluación y acompañamiento para buscar un embarazo.</p></article>
-      <article class="card rv"><svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="6"/><path d="M8 34c1-8 6-12 12-12s11 4 12 12"/></svg><h3>Control prenatal</h3><p>Seguimiento del embarazo, con cercanía.</p></article>
-      <article class="card rv d1"><svg viewBox="0 0 40 40"><path d="M8 20h24M20 8v24"/><circle cx="20" cy="20" r="14"/></svg><h3>Planificación familiar</h3><p>Métodos anticonceptivos según tus metas.</p></article>
-      <article class="card rv d2"><svg viewBox="0 0 40 40"><path d="M10 28c0-10 6-18 10-18s10 8 10 18"/><path d="M6 32h28"/></svg><h3>Cérvix y chequeo general</h3><p>Prevención, papanicolaou y patología cervical.</p></article>
-      <article class="card rv"><svg viewBox="0 0 40 40"><path d="M14 8c0 8 12 8 12 16s-12 8-12 8"/><path d="M26 8c0 8-12 8-12 16"/></svg><h3>Incontinencia y prolapso</h3><p>Evaluación de piso pélvico y opciones de tratamiento.</p></article>
-      <article class="card rv d1"><svg viewBox="0 0 40 40"><path d="M20 8c4 4 9 4 12 4 0 10-4 18-12 22C12 30 8 22 8 12c3 0 8 0 12-4Z"/></svg><h3>Sexualidad y bienestar íntimo</h3><p>Un espacio sin juicios para hablar de lo que importa.</p></article>
-      <article class="card rv d2"><svg viewBox="0 0 40 40"><path d="M10 30 30 10"/><path d="M26 8l6 6"/><path d="M8 32l4-1-3-3Z"/></svg><h3>Cirugía ginecológica y obstétrica</h3><p>Procedimientos en hospitales de primer nivel de Costa Rica.</p></article>
-      <article class="card rv"><svg viewBox="0 0 40 40"><path d="M20 6l3.5 9.5L33 18l-9.5 3.5L20 31l-3.5-9.5L7 18l9.5-2.5Z"/></svg><h3>Estética ginecológica</h3><p>Opciones para sentirte cómoda y segura en tu cuerpo.</p></article>
+    <div class="feature" id="cirugia">
+      <div class="ph rv"><img src="assets/cirugia.webp" alt="La Dra. Brickler en quirófano" loading="lazy" width="1400" height="1050"></div>
+      <div class="rv d1">
+        <span class="eyebrow">Cirugías</span>
+        <h3>Cirugía ginecológica y obstétrica, en hospitales de primer nivel.</h3>
+        <p>Cuando se necesita cirugía, la planificamos juntas: una explicación clara antes, y seguimiento después. Opero en hospitales de primer nivel de Costa Rica.</p>
+        <div class="tags"><span>Ginecológica</span><span>Obstétrica</span></div>
+        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20informaci%C3%B3n%20sobre%20una%20cirug%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
@@ -400,16 +436,16 @@ footer .fine a{text-decoration:underline}
 <section class="block about" id="doctora">
   <div class="wrap">
     <div class="grid2">
-      <div class="portrait rv"><img src="assets/dra-portrait.webp" alt="Retrato de la Dra. Laly Brickler" loading="lazy" width="1000" height="1333"></div>
+      <div class="portrait rv"><img src="assets/dra-portrait.webp" alt="La Dra. Laly Brickler sonriendo en su consultorio" loading="lazy" width="1000" height="1333"></div>
       <div>
         <span class="eyebrow rv">La doctora</span>
         <h2 class="title rv d1">Humana, respetuosa, y a tu lado.</h2>
         <p class="rv d2">Soy ginecóloga y obstetra, y atiendo la salud de la mujer en todas sus etapas, en lo clínico y en lo quirúrgico. Creo que toda mujer merece un trato humano y respetuoso, sin importar cuáles sean sus metas en la vida.</p>
         <p class="rv d2">Mi plan de tratamiento y mi educación para ti parten de lo que tú esperas de tu vida, no de un protocolo único.</p>
         <div class="facts rv d3">
-          <div><strong>8</strong><span>años de experiencia</span></div>
+          <div><strong>10</strong><span>años de experiencia</span></div>
           <div><strong>2</strong><span>idiomas, español e inglés</span></div>
-          <div><strong>L a V</strong><span>consulta, con cita</span></div>
+          <div><strong>9 a 6</strong><span>lunes a viernes, con cita</span></div>
         </div>
       </div>
     </div>
@@ -434,7 +470,7 @@ footer .fine a{text-decoration:underline}
       <details><summary>¿Tengo que estar en menopausia para consultar?</summary><p>No. La perimenopausia puede empezar varios años antes de la última menstruación, y es buen momento para consultar si notas cambios en tu ciclo, tu sueño o tu ánimo.</p></details>
       <details><summary>¿La terapia hormonal es para todas?</summary><p>No. Se indica según tus síntomas, tu edad, tu historia y tus antecedentes. La declaración de 2022 de la Sociedad Norteamericana de Menopausia (NAMS) señala que, en mujeres menores de 60 años o a menos de 10 años de la menopausia, el balance entre beneficios y riesgos es favorable para tratar los síntomas molestos cuando no hay contraindicaciones. Aun así, cada caso se decide en consulta. <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" target="_blank" rel="noopener">Ver la fuente</a>.</p></details>
       <details><summary>¿Y si prefiero no usar hormonas?</summary><p>Es una decisión tuya y se respeta. Hay otras opciones y ajustes de hábitos que revisamos según tu caso.</p></details>
-      <details><summary>¿Dónde queda y cuándo atiende?</summary><p>En Torre Médica I, Hospital CIMA, Escazú, Costa Rica. La consulta es de lunes a viernes, con cita. Para agendar, escríbeme por WhatsApp.</p></details>
+      <details><summary>¿Dónde queda y cuándo atiende?</summary><p>En Torre Médica I, Hospital CIMA, Escazú, Costa Rica. La consulta es de lunes a viernes, de 9 am a 6 pm, con cita. Para agendar, escríbeme por WhatsApp.</p></details>
       <details><summary>¿Realiza cirugías?</summary><p>Sí. Realizo cirugías ginecológicas y obstétricas en hospitales de primer nivel de Costa Rica.</p></details>
       <details><summary>¿Atiende en inglés?</summary><p>Sí, en español e inglés.</p></details>
     </div>
@@ -459,9 +495,9 @@ footer .fine a{text-decoration:underline}
 <footer>
   <div class="wrap">
     <div class="top">
-      <div><img src="assets/logo.png" alt="Dra. Laly Brickler, Gynecology &amp; Obstetrics" width="590" height="150"></div>
-      <div><h4>Consultorio</h4>Torre Médica I, Hospital CIMA<br>Escazú, Costa Rica<br>Lunes a viernes, con cita</div>
-      <div><h4>Contacto</h4><a href="https://wa.me/50672498786" target="_blank" rel="noopener">WhatsApp 7249-8786</a></div>
+      <div><img src="assets/logo-cream.png" alt="Dra. Laly Brickler, Gynecology &amp; Obstetrics" width="590" height="150"></div>
+      <div><h4>Consultorio</h4>Torre Médica I, Hospital CIMA<br>Escazú, Costa Rica<br>Lunes a viernes, 9 am a 6 pm, con cita</div>
+      <div><h4>Contacto</h4><a href="https://wa.me/50672498786" target="_blank" rel="noopener">WhatsApp 7249-8786</a><br><a href="mailto:myobgynbrickler@gmail.com">myobgynbrickler@gmail.com</a></div>
     </div>
     <p class="fine">Este sitio es informativo y no sustituye una consulta médica. Los tratamientos se indican de forma individual tras una evaluación. Referencia: <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" target="_blank" rel="noopener">The 2022 hormone therapy position statement of The North American Menopause Society, Menopause 2022</a>. Imágenes de apoyo generadas con inteligencia artificial.</p>
   </div>
