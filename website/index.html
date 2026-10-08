@@ -246,6 +246,37 @@ footer .fine a{text-decoration:underline}
 .final-cta .btn:hover{background:#1b3568}
 .hero-wash{background:linear-gradient(90deg,rgba(252,248,244,.8) 0%,rgba(252,248,244,.5) 28%,rgba(252,248,244,0) 52%)}
 
+
+/* ---------- Accordion of care areas ---------- */
+.acc{margin-top:46px;border-top:1px solid rgba(15,36,70,.18)}
+.acc-item{border-bottom:1px solid rgba(15,36,70,.18)}
+.acc-head{width:100%;display:flex;align-items:center;gap:clamp(14px,3vw,30px);padding:clamp(22px,3vw,34px) 6px;background:none;border:0;cursor:pointer;text-align:left;font:inherit;color:var(--navy);transition:background .3s,padding .4s var(--ease)}
+.acc-head:hover{background:rgba(221,189,181,.25);padding-left:18px}
+.acc-head:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.acc-num{font-family:var(--display);font-size:clamp(18px,2vw,24px);color:var(--gold);min-width:34px}
+.acc-title{flex:1;font-family:var(--display);font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.1}
+.acc-icon{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);flex:none;transition:background .35s,transform .5s var(--ease)}
+.acc-icon::before,.acc-icon::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1px;background:var(--navy);transform:translate(-50%,-50%);transition:transform .5s var(--ease),background .3s}
+.acc-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc-item.open .acc-icon{background:var(--gold);transform:rotate(180deg)}
+.acc-item.open .acc-icon::before,.acc-item.open .acc-icon::after{background:#fff}
+.acc-item.open .acc-icon::after{transform:translate(-50%,-50%) rotate(0deg)}
+.acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .65s var(--ease)}
+.acc-item.open .acc-panel{grid-template-rows:1fr}
+.acc-inner{overflow:hidden;min-height:0}
+.acc-body{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,70px);align-items:center;padding:6px 6px clamp(34px,5vw,56px);opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease) .1s,transform .7s var(--ease) .1s}
+.acc-item.open .acc-body{opacity:1;transform:none}
+.acc-img{border-radius:24px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 26px 60px rgba(120,80,80,.22)}
+.acc-img img{width:100%;height:100%;object-fit:cover}
+.acc-body h3{font-size:clamp(26px,2.8vw,38px)}
+.acc-body p{margin-top:12px;color:var(--muted);max-width:46ch}
+.acc-label{display:block;margin-top:22px;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.acc-body ul{list-style:none;margin-top:12px}
+.acc-body li{position:relative;padding:8px 0 8px 28px;border-bottom:1px solid rgba(15,36,70,.08);color:var(--ink);font-size:16px}
+.acc-body li::before{content:"";position:absolute;left:2px;top:17px;width:12px;height:7px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg)}
+@media (max-width:900px){.acc-body{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.acc-panel,.acc-body{transition:none}}
+
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .nav nav a:not(.btn){display:none}
@@ -343,56 +374,72 @@ footer .fine a{text-decoration:underline}
 <section class="block areas" id="servicios">
   <div class="wrap">
     <span class="eyebrow rv">Áreas de atención</span>
-    <h2 class="title rv d1">Cada etapa, con la misma atención.</h2>
-    <span class="rule rv"></span>
-    <div class="feature" id="peri">
-      <div class="ph rv"><img src="assets/perimenopausia.webp" alt="Orquídea blanca en un florero dorado sobre mármol" loading="lazy" width="1400" height="1050"></div>
-      <div class="rv d1">
-        <span class="eyebrow">Perimenopausia, menopausia y terapia hormonal</span>
-        <h3>Entender esta etapa, sin que te la minimicen.</h3>
-        <p>Evaluación completa de tus síntomas, tu historia y tus metas. Si la terapia hormonal tiene sentido para ti, se indica de forma personalizada: la vía, la dosis y el seguimiento correctos para tu caso. Y si prefieres no usarla, revisamos otras opciones.</p>
-        <div class="tags"><span>Sofocos</span><span>Sueño</span><span>Estado de ánimo</span><span>Salud ósea</span><span>Terapia hormonal personalizada</span><span>Opciones sin hormonas</span></div>
-        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20por%20perimenopausia%20o%20menopausia." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    <h2 class="title rv d1">Toca una área y mira qué hago en ella.</h2>
+    <div class="acc rv" id="acc">
+      <div class="acc-item open" id="peri">
+        <button class="acc-head" id="h-peri" aria-expanded="true" aria-controls="p-peri"><span class="acc-num">01</span><span class="acc-title">Perimenopausia, menopausia y terapia hormonal</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <div class="acc-panel" id="p-peri" role="region" aria-labelledby="h-peri"><div class="acc-inner"><div class="acc-body">
+          <div class="acc-img"><img src="assets/perimenopausia.webp" alt="Orquídea blanca en un florero dorado sobre mármol" loading="lazy" width="1400" height="1050"></div>
+          <div>
+            <h3>Entender esta etapa, sin que te la minimicen.</h3>
+            <p>Evaluación completa de tus síntomas, tu historia y tus metas, para armar un plan que cabe en tu vida.</p>
+            <span class="acc-label">Lo que hago</span>
+            <ul><li>Evaluación de perimenopausia y menopausia</li><li>Terapia hormonal personalizada: vía, dosis y seguimiento</li><li>Opciones sin hormonas, si las prefieres</li><li>Trastornos hormonales</li><li>Sexualidad y bienestar íntimo</li></ul>
+            <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20por%20perimenopausia%2C%20menopausia%20o%20terapia%20hormonal." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div></div></div>
       </div>
-    </div>
-    <div class="feature flip" id="gineco">
-      <div class="ph rv"><img src="assets/ginecologia.webp" alt="La Dra. Brickler en su sala de consulta" loading="lazy" width="1400" height="1050"></div>
-      <div class="rv d1">
-        <span class="eyebrow">Ginecología</span>
-        <h3>Chequeos y diagnósticos con trato humano.</h3>
-        <p>Revisión ginecológica, papanicolaou y prevención. También ciclos irregulares, trastornos hormonales, patología cervical, incontinencia, prolapso, planificación familiar y salud sexual, en un espacio sin juicios.</p>
-        <div class="tags"><span>Chequeo anual</span><span>Papanicolaou</span><span>Patología cervical</span><span>Trastornos hormonales</span><span>Incontinencia y prolapso</span><span>Planificación familiar</span><span>Sexualidad</span></div>
-        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20de%20ginecolog%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <div class="acc-item" id="gineco">
+        <button class="acc-head" id="h-gineco" aria-expanded="false" aria-controls="p-gineco"><span class="acc-num">02</span><span class="acc-title">Ginecología</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <div class="acc-panel" id="p-gineco" role="region" aria-labelledby="h-gineco"><div class="acc-inner"><div class="acc-body">
+          <div class="acc-img"><img src="assets/ginecologia.webp" alt="La Dra. Brickler en su sala de consulta" loading="lazy" width="1400" height="1050"></div>
+          <div>
+            <h3>Chequeos y diagnósticos con trato humano.</h3>
+            <p>Atención ginecológica completa, en un espacio sin juicios y con tiempo para tus preguntas.</p>
+            <span class="acc-label">Lo que hago</span>
+            <ul><li>Chequeo ginecológico general y papanicolaou</li><li>Patología cervical</li><li>Planificación familiar</li><li>Salud reproductiva y fertilidad</li><li>Evaluación de incontinencia y prolapso</li><li>Sexualidad</li></ul>
+            <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20de%20ginecolog%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div></div></div>
       </div>
-    </div>
-    <div class="feature" id="estetica">
-      <div class="ph rv"><img src="assets/terapia.webp" alt="Vaso de agua con borde dorado y flores de cerezo sobre mármol" loading="lazy" width="1400" height="1050"></div>
-      <div class="rv d1">
-        <span class="eyebrow">Estética ginecológica</span>
-        <h3>Sentirte cómoda y segura en tu cuerpo.</h3>
-        <p>Opciones de estética y bienestar ginecológico, evaluadas con calma y según lo que tú buscas. Primero conversamos, después decidimos.</p>
-        <div class="tags"><span>Evaluación personalizada</span><span>Bienestar íntimo</span></div>
-        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20informaci%C3%B3n%20sobre%20est%C3%A9tica%20ginecol%C3%B3gica." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <div class="acc-item" id="estetica">
+        <button class="acc-head" id="h-estetica" aria-expanded="false" aria-controls="p-estetica"><span class="acc-num">03</span><span class="acc-title">Estética ginecológica</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <div class="acc-panel" id="p-estetica" role="region" aria-labelledby="h-estetica"><div class="acc-inner"><div class="acc-body">
+          <div class="acc-img"><img src="assets/terapia.webp" alt="Vaso de agua con borde dorado y flores de cerezo sobre mármol" loading="lazy" width="1400" height="1050"></div>
+          <div>
+            <h3>Sentirte cómoda y segura en tu cuerpo.</h3>
+            <p>Opciones de estética y bienestar ginecológico, evaluadas con calma y según lo que tú buscas. Primero conversamos, después decidimos.</p>
+            <span class="acc-label">Lo que hago</span>
+            <ul><li>Evaluación personalizada</li><li>Explicación clara de cada opción</li><li>Seguimiento después</li></ul>
+            <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20informaci%C3%B3n%20sobre%20est%C3%A9tica%20ginecol%C3%B3gica." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div></div></div>
       </div>
-    </div>
-    <div class="feature flip" id="obstetricia">
-      <div class="ph rv"><img src="assets/prenatal.webp" alt="Manta tejida crema junto a un espejo dorado y flores blancas" loading="lazy" width="1400" height="1050"></div>
-      <div class="rv d1">
-        <span class="eyebrow">Obstetricia</span>
-        <h3>Control prenatal cercano, con tiempo para tus preguntas.</h3>
-        <p>Desde planificar un embarazo hasta el parto y el posparto. Seguimiento cercano, explicado en palabras claras, y espacio para todas tus dudas.</p>
-        <div class="tags"><span>Control prenatal</span><span>Fertilidad</span><span>Parto y posparto</span></div>
-        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20de%20obstetricia." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <div class="acc-item" id="obstetricia">
+        <button class="acc-head" id="h-obstetricia" aria-expanded="false" aria-controls="p-obstetricia"><span class="acc-num">04</span><span class="acc-title">Obstetricia y control prenatal</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <div class="acc-panel" id="p-obstetricia" role="region" aria-labelledby="h-obstetricia"><div class="acc-inner"><div class="acc-body">
+          <div class="acc-img"><img src="assets/prenatal.webp" alt="Manta tejida crema junto a un espejo dorado y flores blancas" loading="lazy" width="1400" height="1050"></div>
+          <div>
+            <h3>Un embarazo acompañado de cerca.</h3>
+            <p>Desde planificar un embarazo hasta el parto y el posparto, con explicaciones claras y espacio para todas tus dudas.</p>
+            <span class="acc-label">Lo que hago</span>
+            <ul><li>Control prenatal</li><li>Planificación del embarazo</li><li>Atención del parto y posparto</li></ul>
+            <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20una%20consulta%20de%20obstetricia%20y%20control%20prenatal." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div></div></div>
       </div>
-    </div>
-    <div class="feature" id="cirugia">
-      <div class="ph rv"><img src="assets/cirugia.webp" alt="La Dra. Brickler en quirófano" loading="lazy" width="1400" height="1050"></div>
-      <div class="rv d1">
-        <span class="eyebrow">Cirugías</span>
-        <h3>Cirugía ginecológica y obstétrica, en hospitales de primer nivel.</h3>
-        <p>Cuando se necesita cirugía, la planificamos juntas: una explicación clara antes, y seguimiento después. Opero en hospitales de primer nivel de Costa Rica.</p>
-        <div class="tags"><span>Ginecológica</span><span>Obstétrica</span></div>
-        <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20informaci%C3%B3n%20sobre%20una%20cirug%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <div class="acc-item" id="cirugia">
+        <button class="acc-head" id="h-cirugia" aria-expanded="false" aria-controls="p-cirugia"><span class="acc-num">05</span><span class="acc-title">Cirugías</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <div class="acc-panel" id="p-cirugia" role="region" aria-labelledby="h-cirugia"><div class="acc-inner"><div class="acc-body">
+          <div class="acc-img"><img src="assets/cirugia.webp" alt="La Dra. Brickler en quirófano" loading="lazy" width="1400" height="1050"></div>
+          <div>
+            <h3>Cirugía ginecológica y obstétrica, en hospitales de primer nivel.</h3>
+            <p>Cuando se necesita cirugía, la planificamos juntas: una explicación clara antes y seguimiento después. Opero en hospitales de primer nivel de Costa Rica.</p>
+            <span class="acc-label">Lo que hago</span>
+            <ul><li>Cirugía ginecológica</li><li>Cirugía obstétrica</li><li>Valoración previa y seguimiento posoperatorio</li></ul>
+            <a class="link" href="https://wa.me/50672498786?text=Hola%20Dra.%20Brickler%2C%20quisiera%20informaci%C3%B3n%20sobre%20una%20cirug%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div></div></div>
       </div>
     </div>
   </div>
@@ -539,6 +586,28 @@ footer .fine a{text-decoration:underline}
     fill.style.transform='scaleY('+p.toFixed(3)+')';
   }
   addEventListener('scroll',stepsLine,{passive:true});stepsLine();
+
+
+  /* care-area accordion: one open at a time */
+  var accItems=$$('.acc-item');
+  function setOpen(item,open){
+    item.classList.toggle('open',open);
+    $('.acc-head',item).setAttribute('aria-expanded',String(open));
+  }
+  accItems.forEach(function(item){
+    $('.acc-head',item).addEventListener('click',function(){
+      var willOpen=!item.classList.contains('open');
+      accItems.forEach(function(o){setOpen(o,false)});
+      if(willOpen){
+        setOpen(item,true);
+        setTimeout(function(){
+          var r=item.getBoundingClientRect();
+          if(r.top<80||r.top>window.innerHeight*0.5){window.scrollTo({top:window.scrollY+r.top-90,behavior:'smooth'})}
+        },120);
+      }
+    });
+  });
+  if(location.hash){var t=document.querySelector(location.hash);if(t&&t.classList.contains('acc-item')){accItems.forEach(function(o){setOpen(o,o===t)})}}
 
   /* finder */
   var DATA={
