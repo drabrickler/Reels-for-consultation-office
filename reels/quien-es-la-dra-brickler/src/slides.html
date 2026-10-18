@@ -30,6 +30,46 @@ html,body{width:1080px;background:#000}
 .it b{color:var(--plum);font-weight:700}
 .end{margin-top:18px;text-align:center;font-family:'Great Vibes',cursive;font-size:64px;line-height:1.1;color:var(--plum)}
 .end .emo{font-size:50px}
+
+.bio{background:var(--ivory)}
+.bio .b1{position:absolute;width:900px;height:900px;right:-380px;top:-300px;border-radius:50%;background:#F3DDD6;opacity:.8}
+.bio .b2{position:absolute;width:760px;height:760px;left:-340px;bottom:-300px;border-radius:50%;background:#EBD3C2;opacity:.55}
+.bio .head{position:absolute;top:100px;left:80px;right:80px;display:flex;align-items:center;gap:30px}
+.bio .head img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 6px 24px rgba(79,33,69,.28)}
+.bio .head .nm{font-family:'Great Vibes',cursive;font-size:92px;color:var(--plum);line-height:1}
+.bio .head .rl{font-size:27px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-top:6px}
+.txt{position:absolute;left:70px;width:940px;top:0}
+.it{display:flex;gap:26px;align-items:flex-start;margin-bottom:36px}
+.it .e{flex:0 0 78px;height:78px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(79,33,69,.16);display:flex;align-items:center;justify-content:center;font-size:40px;margin-top:4px}
+.it p{font-size:42px;line-height:1.26;font-weight:600;color:var(--ink)}
+.it p + p{margin-top:18px}
+.it b{color:var(--plum);font-weight:700}
+.end{margin-top:10px;text-align:center;font-family:'Great Vibes',cursive;font-size:84px;line-height:1.12;color:var(--plum);padding-bottom:20px}
+.end .emo{font-size:56px}
+.mode-base .head,.mode-base .txt,.mode-header .txt,.mode-footer .head,.mode-footer .txt,.mode-body .head,.mode-body .b1,.mode-body .b2{display:none}
+body[class^="mode-"] #s1{display:none}
+.mode-body .bio{background:transparent}
+.mode-body .bio{overflow:visible}
+
+.txt{position:absolute;left:64px;width:952px;top:300px}
+.it{display:block;margin-bottom:15px}
+.it p{font-size:33.5px;line-height:1.19;font-weight:600;color:var(--ink)}
+.it p + p{margin-top:6px}
+.it .e{display:inline;width:auto;height:auto;background:none;box-shadow:none;border-radius:0;margin:0 9px 0 0;font-size:30px}
+.it b{color:var(--plum);font-weight:700}
+.end{margin-top:6px;text-align:center;font-family:'Great Vibes',cursive;font-size:60px;line-height:1.1;color:var(--plum)}
+.end .emo{font-size:40px}
+
+.bio .head{top:56px;left:56px;gap:26px}
+.bio .head img{width:120px;height:120px;border-width:5px}
+.bio .head .nm{font-size:84px}
+.bio .head .rl{font-size:24px;margin-top:2px}
+.txt{left:44px;width:992px;top:206px}
+.it{margin-bottom:var(--gap,12px)}
+.it p{font-size:var(--fs,30px);line-height:1.16}
+.it .e{font-size:calc(var(--fs,30px)*.9);margin-right:7px}
+.end{font-size:calc(var(--fs,30px)*2);margin-top:4px;line-height:1}
+.end .emo{font-size:calc(var(--fs,30px)*1.3)}
 </style></head><body>
 
 <section class="slide cover" id="s1">
@@ -42,19 +82,21 @@ html,body{width:1080px;background:#000}
  </div>
 </section>
 
+
 <section class="slide bio" id="s2">
  <div class="b1"></div><div class="b2"></div>
  <div class="head"><img src="retrato.jpg"><div><div class="nm">Laly Brickler</div><div class="rl">Ginecología y Obstetricia</div></div></div>
- <div class="list">
-  <div class="it"><div class="e emo">🌎</div><p><b>Costarricense y estadounidense,</b> de padre alemán y madre tica. Nací y crecí en otro país: dos culturas, muchas ventajas.</p></div>
-  <div class="it"><div class="e emo">🎓</div><p>Empecé la universidad en <b>Wisconsin</b> y vine a Costa Rica con mi madre, donde continué <b>medicina.</b></p></div>
-  <div class="it"><div class="e emo">🌿</div><p><b>Servicio social en Monteverde:</b> un año hermoso, con la naturaleza y la calidad humana de su gente.</p></div>
-  <div class="it"><div class="e emo">🏥</div><p><b>Primer promedio</b> en Ginecología y Obstetricia, Hospital San Juan de Dios con la UCR. Luego, CCSS.</p></div>
-  <div class="it"><div class="e emo">✨</div><p>Sector privado en todos los hospitales privados; <b>más de 6 años en Hospital CIMA.</b> Cursos en <b>estética ginecológica</b> y <b>terapia de reemplazo hormonal.</b></p></div>
-  <div class="it"><div class="e emo">💗</div><p>Mente abierta: <b>cada mujer merece un trato humano y respetuoso,</b> sin importar sus metas de vida. Manejos dirigidos a tu expectativa en todas las etapas de tu vida.</p></div>
-  <div class="it"><div class="e emo">🔬</div><p>Me apasionan sus múltiples ramas, clínicas y quirúrgicas, la <b>endocrinología</b> y la <b>fisiología de la mujer.</b></p></div>
-  <div class="it"><div class="e emo">🐶</div><p>Fuera del consultorio: mis perros y mi gato, ejercicio, libros físicos, inteligencia artificial, música de todo tipo y la familia Angulo.</p></div>
- <div class="end"><span class="emo">💫</span> No es un trabajo, sino una profesión hecha para mí. <span class="emo">💫</span></div>
+ <div class="txt" id="txt">
+  <div class="it"><p><span class="e emo">🌎</span><b>Me llamo Laly Brickler.</b></p><p>Orgullosamente tengo <b>dos nacionalidades,</b> costarricense y estadounidense. De padre alemán y madre tica. Yo nací y crecí en otro país. Obtuve muchas ventajas de tener <b>dos culturas distintas;</b> he conocido diferentes creencias y diferentes formas de desarrollo humano.</p></div>
+  <div class="it"><p><span class="e emo">🎓</span>Después de mis estudios escolares y de colegio empecé en la <b>Universidad en Wisconsin.</b> Sin embargo, decidí venir a vivir a Costa Rica acompañando a mi madre, donde continué con la <b>carrera de medicina</b> en la universidad.</p></div>
+  <div class="it"><p><span class="e emo">🌿</span>Una vez que me gradué de medicina, hice mi <b>servicio social en Monteverde.</b> Este año fue una experiencia hermosa, con la naturaleza y la calidad humana de los vecinos de Monteverde.</p></div>
+  <div class="it"><p><span class="e emo">🏥</span>Posteriormente entré como <b>primer promedio</b> a mi especialidad médica en <b>Ginecología y Obstetricia</b> en el Hospital San Juan de Dios con la Universidad de Costa Rica. Aquí tuve una extensa formación en mi especialidad. Una vez graduada, seguí en la CCSS.</p></div>
+  <div class="it"><p><span class="e emo">✨</span>En este momento decidí no solo estar en el sector público, sino también extenderme al <b>sector privado.</b> Aquí logré estar en todos los hospitales privados y, hasta este momento, sigo en el sector privado en el <b>Hospital CIMA,</b> donde llevo <b>más de 6 años.</b> En esta etapa logré hacer varios cursos, entre ellos <b>estética ginecológica</b> y <b>terapia de reemplazo hormonal.</b></p></div>
+  <div class="it"><p><span class="e emo">💗</span>Soy de mente abierta y fielmente siento que <b>cada mujer merece un trato humano y respetuoso,</b> independientemente de cuáles sean sus objetivos y/o metas de vida. Me mantengo al día con mi especialidad, con nuevos conocimientos mediante estudio continuo que me permite estar actualizada. Brindo manejos eficaces y dirigidos a la expectativa de mi paciente en todas las etapas de su vida.</p></div>
+  <div class="it"><p><span class="e emo">🔬</span>Desde estudiante universitaria la Ginecología y Obstetricia me conmovió, me abrió curiosidad, me motivó; simplemente me encantó la especialidad y sus múltiples ramas, tanto clínicas como quirúrgicas. Lo intrigante de la <b>endocrinología</b> y la <b>fisiología de la mujer.</b> Yo, siendo mujer, me siento muy capaz de relacionarme con mis pacientes de todas las edades.</p></div>
+  <div class="it"><p><span class="e emo">🐶</span>En mi tiempo libre me gusta caminar con mis mascotas; amo los animales, tengo perros y un gato. Me gusta hacer ejercicio con mi propio peso. Me gusta leer, aunque sea a lo antiguo, con libros físicos. Me gusta aprender sobre inteligencia artificial, algo que no pensé que me iba a gustar, pero cuando empecé a aprender un poco, me encantó.</p></div>
+  <div class="it"><p><span class="e emo">🎶</span>Me encanta la música de todo tipo, desde música clásica hasta rock, grunge, música electrónica y flamenco. Mi familia es pequeña, pero bendecida de tener a la <b>familia Angulo.</b></p></div>
+  <div class="end"><span class="emo">💫</span> Amo la Ginecología y Obstetricia, no es un trabajo sino una profesión hecha para mí. <span class="emo">💫</span></div>
  </div>
 </section>
 </body></html>
