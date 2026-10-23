@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Reel 2 - Manejo de la candidiasis recurrente</title>
+<meta name="viewport" content="width=1080">
+<link rel="stylesheet" href="../_shared/style.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- ESCENA 1 · GANCHO 0 – 4 -->
+  <section class="scene" id="s1" data-s="0" data-e="4">
+    <img class="bg kb" data-kb="1.22,1.05" src="assets/candida.jpg">
+    <div class="veil"></div>
+    <div class="vignette"></div>
+    <div class="abs" style="top:260px"><span class="pill" data-t="0" data-d="0.5" data-a="pop">Candidiasis recurrente</span></div>
+    <div class="abs" style="top:720px">
+      <div class="h1 shadow" style="font-size:128px"><span class="w" data-t="0.3" data-d="0.5" data-a="rise" style="opacity:0">Tratar solo</span></div>
+      <div class="h1 shadow" style="font-size:128px"><span class="w" data-t="0.8" data-d="0.5" data-a="rise">el episodio</span></div>
+      <div class="h1 shadow acc" style="font-size:150px;margin-top:14px"><span class="w" data-t="1.4" data-d="0.6" data-a="pop">no basta.</span></div>
+    </div>
+    <div class="abs" style="top:1270px">
+      <div class="h2 shadow" style="font-size:64px" data-t="2.5" data-d="0.6" data-a="rise">Se maneja en <span class="acc" style="font-weight:700">2 fases</span></div>
+    </div>
+  </section>
+
+  <!-- ESCENA 2 · FASE 1 · REMISIÓN 4 – 11 -->
+  <section class="scene" id="s2" data-s="4" data-e="11">
+    <img class="bg kb" data-kb="1.1,1.0" src="assets/woman.jpg" style="filter:blur(14px)">
+    <div class="veil-dark"></div>
+    <div class="glow" style="left:-10px;top:300px"></div>
+    <div class="abs" style="top:260px"><span class="pill" data-t="4.4" data-d="0.5" data-a="pop">Fase 1</span></div>
+    <div class="abs" style="top:370px">
+      <div class="big" style="font-size:150px;letter-spacing:-.03em" data-t="4.7" data-d="0.7" data-a="rise">Remisión</div>
+      <div class="h2" style="font-size:60px;margin-top:14px" data-t="5.3" data-d="0.6" data-a="rise">primero se apaga el brote</div>
+    </div>
+    <div class="abs" style="top:720px;padding:0">
+      <div class="tl">
+        <div class="tl-line" data-t="5.8" data-d="1.6" data-a="grow"></div>
+        <div class="node" style="left:18px" data-t="6.0" data-d="0.5" data-a="pop">1</div>
+        <div class="node" style="left:398px" data-t="6.9" data-d="0.5" data-a="pop">4</div>
+        <div class="node" style="left:778px" data-t="7.8" data-d="0.5" data-a="pop">7</div>
+        <div class="node-l" style="left:18px" data-t="6.2" data-d="0.5" data-a="rise">Día 1</div>
+        <div class="node-l" style="left:398px" data-t="7.1" data-d="0.5" data-a="rise">Día 4</div>
+        <div class="node-l" style="left:778px" data-t="8.0" data-d="0.5" data-a="rise">Día 7</div>
+      </div>
+    </div>
+    <div class="abs" style="top:1070px">
+      <div class="h1" style="font-size:78px" data-t="8.5" data-d="0.6" data-a="rise">Fluconazol oral<br><span class="acc">cada 72 h · 3 dosis</span></div>
+    </div>
+    <div class="abs" style="top:1330px">
+      <span class="chip" data-t="9.4" data-d="0.5" data-a="pop">o tratamiento tópico 7–14 días</span>
+    </div>
+    <div class="abs" style="top:1480px"><div class="src" data-t="9.9" data-d="0.5" data-a="fade">CDC. STI Treatment Guidelines 2021. MMWR Recomm Rep 2021;70(4):1–187</div></div>
+  </section>
+
+  <!-- ESCENA 3 · FASE 2 · MANTENIMIENTO 11 – 19 -->
+  <section class="scene" id="s3" data-s="11" data-e="19">
+    <img class="bg kb" data-kb="1.0,1.12" src="assets/tissue.jpg" style="filter:blur(16px)">
+    <div class="veil-dark"></div>
+    <div class="glow" style="left:-10px;top:560px"></div>
+    <div class="abs" style="top:260px"><span class="pill" data-t="11.4" data-d="0.5" data-a="pop">Fase 2</span></div>
+    <div class="abs" style="top:370px">
+      <div class="big" style="font-size:118px;letter-spacing:-.03em" data-t="11.7" data-d="0.7" data-a="rise">Mantenimiento</div>
+      <div class="h2" style="font-size:60px;margin-top:14px" data-t="12.3" data-d="0.6" data-a="rise">para que no vuelva</div>
+    </div>
+    <div class="abs" style="top:700px"><div class="grid" id="grid"></div></div>
+    <div class="abs" style="top:905px"><div class="small" style="font-size:36px" data-t="12.6" data-d="0.5" data-a="fade">Cada casilla = 1 semana</div></div>
+    <div class="abs" style="top:1030px">
+      <div class="h1" style="font-size:80px" data-t="14.2" data-d="0.6" data-a="rise">Fluconazol<br><span class="acc">1 vez por semana</span></div>
+    </div>
+    <div class="abs" style="top:1300px">
+      <div class="big" style="font-size:190px" data-t="16.8" data-d="0.7" data-a="pop" id="six">6 meses</div>
+    </div>
+    <div class="abs" style="top:1500px"><div class="src" data-t="17.6" data-d="0.5" data-a="fade">CDC 2021: fluconazol 100, 150 o 200 mg semanal × 6 meses; alternativa tópica intermitente</div></div>
+  </section>
+
+  <!-- ESCENA 4 · AUTORIDAD 19 – 24 -->
+  <section class="scene" id="s4" data-s="19" data-e="24">
+    <img class="bg kb" data-kb="1.0,1.08" src="assets/photo.jpg" style="inset:0;width:100%;height:100%;object-position:50% 0%;transform-origin:50% 12%">
+    <div class="grad-bottom" style="background:linear-gradient(180deg,rgba(9,24,51,0) 0%,rgba(9,24,51,0) 46%,rgba(9,24,51,.78) 66%,rgba(9,24,51,.97) 86%,#091833 100%)"></div>
+    <div class="abs" style="top:1010px">
+      <div class="h1 shadow" style="font-size:104px">
+        <span class="w" data-t="19.5" data-d="0.5" data-a="rise">Se</span><span class="w acc" data-t="19.75" data-d="0.5" data-a="rise">individualiza</span>
+      </div>
+      <div class="h1 shadow" style="font-size:104px;margin-top:6px">
+        <span class="w" data-t="20.2" data-d="0.5" data-a="rise">en</span><span class="w" data-t="20.45" data-d="0.5" data-a="rise">consulta.</span>
+      </div>
+      <div class="h2 shadow" style="margin-top:34px;font-size:68px">
+        <span class="w" data-t="21.3" data-d="0.45" data-a="rise">No</span><span class="w" data-t="21.5" data-d="0.45" data-a="rise">te</span><span class="w acc" style="font-weight:700" data-t="21.7" data-d="0.45" data-a="rise">automediques.</span>
+      </div>
+    </div>
+    <div class="abs" style="top:1420px"><img src="assets/logo.png" style="width:520px" data-t="22.3" data-d="0.7" data-a="rise"></div>
+  </section>
+
+  <!-- ESCENA 5 · CTA 24 – 30 -->
+  <section class="scene" id="s5" data-s="24" data-e="30.01">
+    <div class="glow" style="left:-10px;top:300px"></div>
+    <div class="glow" style="left:-10px;top:1000px;opacity:.6"></div>
+    <div class="abs" style="top:380px"><img src="assets/logo.png" style="width:820px" data-t="24.4" data-d="0.9" data-a="pop"></div>
+    <div class="abs" style="top:700px"><div style="width:140px;height:4px;background:var(--rose);border-radius:4px" data-t="25.0" data-d="0.6" data-a="grow"></div></div>
+    <div class="abs" style="top:790px"><div class="h1" style="font-size:112px" data-t="25.3" data-d="0.7" data-a="rise">Agenda tu<br><span class="acc">valoración</span></div></div>
+    <div class="abs" style="top:1150px">
+      <div class="h2" style="font-size:60px;font-weight:700;color:#fff" data-t="26.3" data-d="0.6" data-a="rise">WhatsApp 7249-8786</div>
+      <div class="h2" style="font-size:50px;margin-top:10px" data-t="26.8" data-d="0.6" data-a="rise">Torre Médica I · Hospital CIMA, Escazú</div>
+      <div class="small" style="margin-top:20px;font-size:38px" data-t="27.2" data-d="0.6" data-a="rise">Consulta de lunes a viernes</div>
+    </div>
+    <div class="abs" style="top:1400px"><div class="pill" id="cta" style="font-size:40px;letter-spacing:.08em;padding:26px 60px;background:var(--rose);color:var(--navy);border-color:var(--rose)" data-t="27.8" data-d="0.6" data-a="pop">Guárdalo y compártelo</div></div>
+  </section>
+
+  <div id="wipeA"></div><div id="wipeB"></div>
+  <div id="progress"></div>
+</div>
+
+<script>
+window.TOTAL=30; window.BOUNDS=[4,11,19,24];
+// cuadrícula de 26 semanas (6 meses)
+const g=document.getElementById('grid');
+for(let i=0;i<26;i++){
+  const base=document.createElement('div');base.className='cell dim';g.appendChild(base);
+}
+// celdas que se llenan encima (misma cuadrícula, superpuestas por posición)
+g.style.position='relative';
+const over=document.createElement('div');over.className='grid';over.style.cssText='position:absolute;inset:0';
+for(let i=0;i<26;i++){
+  const c=document.createElement('div');c.className='cell';c.dataset.t=(12.9+i*0.13).toFixed(2);c.dataset.d='0.3';c.dataset.a='cell';over.appendChild(c);
+}
+g.appendChild(over);
+window.extra=function(t){
+  if(t>17.6&&t<18.3){document.getElementById('six').style.transform=`scale(${1+0.06*Math.sin((t-17.6)/0.7*Math.PI)})`}
+  const cta=document.getElementById('cta');
+  if(t>28.4){cta.style.transform=`scale(${1+0.035*Math.sin((t-28.4)*5)})`}
+};
+</script>
+<script src="../_shared/engine.js"></script>
+</body>
+</html>
